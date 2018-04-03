@@ -4,60 +4,78 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Spectra</title>
-  <!-- <script type="module" src="teacher.js"></script> -->
-	<link rel="stylesheet" href="teacher.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/teacher.css">
 </head>
 <body>
   <div class="root">
     <div class="header">
       <h1>Mrs Jameson's Class</h1>
-      <button class="colorkey">Color Key</button>
-      <button class="requested">Requested Meetings</button>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">Requested Meetings</i></a>
     </div>
     <div class="classroom">
     <div class="flex-grid-thirds">
-      <div class="col">Stuart</div>
-      <div class="col">Grace</div>
-      <div class="col">Tom</div>
-      <div class="col">Lizzie</div>
-      <div class="col">James</div>
-      <div class="col">Fred</div>
+      <div class="col grid-element angry">Stuart</div>
+      <div class="col grid-element happy">Grace</div>
+      <div class="col grid-element present">Tom</div>
+      <div class="col grid-element happy">Lizzie</div>
+      <div class="col grid-element angry">James</div>
+      <div class="col grid-element sad">Fred</div>
     </div>
   
     <div class="flex-grid-thirds">
-      <div class="col">Henry</div>
-      <div class="col">Alice</div>
-      <div class="col">Jen</div>
-      <div class="col">Matt</div>
-      <div class="col">Julia</div>
-      <div class="col">Patrick</div>
+      <div class="col grid-element sad">Henry</div>
+      <div class="col grid-element angry">Alice</div>
+      <div class="col grid-element happy">Jen</div>
+      <div class="col grid-element angry">Matt</div>
+      <div class="col grid-element incomp">Julia</div>
+      <div class="col grid-element present">Patrick</div>
     </div>
   
     <div class="flex-grid-thirds">
-      <div class="col">Christine</div>
-      <div class="col">Jose</div>
-      <div class="col">Kevin</div>
-      <div class="col">Tracey</div>
-      <div class="col">Paula</div>
-      <div class="col">Keith</div>
+      <div class="col grid-element sad">Christine</div>
+      <div class="col grid-element happy">Jose</div>
+      <div class="col grid-element angry">Kevin</div>
+      <div class="col grid-element incomp">Tracey</div>
+      <div class="col grid-element present">Paula</div>
+      <div class="col grid-element angry">Keith</div>
     </div>
     <div class="flex-grid-thirds">
-        <div class="col">Jack</div>
-        <div class="col">Lucy</div>
-        <div class="col">James</div>
-        <div class="col">Hillary</div>
-        <div class="col">Patricia</div>
-        <div class="col">Leslie</div>
+        <div class="col grid-element angry">Jack</div>
+        <div class="col grid-element sad">Lucy</div>
+        <div class="col grid-element present">James</div>
+        <div class="col grid-element happy">Hillary</div>
+        <div class="col grid-element happy">Patricia</div>
+        <div class="col grid-element incomp">Leslie</div>
       </div>
       <div class="flex-grid-thirds">
-          <div class="col">Jeffrey</div>
-          <div class="col">Lara</div>
-          <div class="col">Jeremy</div>
-          <div class="col">Pauline</div>
-          <div class="col">Mark</div>
-          <div class="col">Jim</div>
+          <div class="col grid-element sad">Jeffrey</div>
+          <div class="col grid-element angry">Lara</div>
+          <div class="col grid-element happy">Jeremy</div>
+          <div class="col grid-element incomp">Pauline</div>
+          <div class="col grid-element happy">Mark</div>
+          <div class="col grid-element present">Jim</div>
         </div>
   </div>
+  
+  <nav> <!-- navbar content here  --> </nav>
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <!-- <img src="images/office.jpg"> -->
+      </div>
+      <!-- <a href="#user"><img class="circle" src="images/yuna.jpg"></a> -->
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
   </div>
+  <script src="../js/teacher.js"></script>
 </body>
 </html>
