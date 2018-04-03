@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- <style>
+			@import "../css/reset.css";
+		</style> -->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="utf8">
+		<title>Spectra</title>
+		<!-- <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="../js/google.fastbutton.js"></script>
+		<script src="../js/jquery.google.fastbutton.js"></script>
+		<script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+		 -->
+		<link rel="stylesheet" href="../css/style.css"/>
+	</head>	
+
+	<body>
+		<div id="home" class="sc">
+			<div class="newMood">
+				<button page-load="FeelingScreen">New Mood</button>
+			</div>
+			<div class="dropdown">
+				<button class="hamburger">&#9776;</button>
+				<button class="cross">&#735;</button>
+			</div>
+		</div>
+
+	
+		<div id="FeelingScreen" class="sc">
+			<header>
+				<a class="back link slideright" page-load="home">Back</a>
+				<h1>I'm Feeling...</h1>
+				<ul>
+					<li class="feeling" page-load="TypeScreen">Present</li>
+					<li class="feeling" page-load="TypeScreen">Sad</li>
+					<li class="feeling" page-load="TypeScreen">Happy</li>
+					<li class="feeling" page-load="TypeScreen">Angry</li>
+				</ul>
+			</header>
+		</div>
+
+		<div id="TypeScreen" page-load="sc">
+			<header>
+				<a class="back link " page-load="FeelingScreen">Back</a>
+				<h1>What type of ____?</h1>
+				<ul>
+					<li class="type" page-load="BecauseScreen">type1</li>
+					<li class="type" page-load="BecauseScreen">type2</li>
+					<li class="type" page-load="BecauseScreen">type3</li>
+				</ul>
+			</header>
+		</div>
+
+		<div id="BecauseScreen" class="sc">
+			<header>
+				<a class="back link " page-load="TypeScreen">Back</a>
+				<h1>You're feeling ___. Why?</h1>
+				<textarea name="description" required placeholder="Why do you feel that way? Tell me more!"></textarea>
+				<input class="submit" type="submit" name="submit">
+			</header>
+		</div>
+		<script type="text/javascript" src="../js/
+		main.js"></script>
+	</body>
+</html>
