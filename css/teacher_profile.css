@@ -1,0 +1,125 @@
+.contactparent {
+  background-color: white;
+  width: 140px;
+  height: 50px;
+  margin: 0 0 40px;
+}
+
+.contactdiv {
+  text-align: center;
+}
+
+.alertadvisor {
+  width: 140px;
+  height: 50px;
+}
+
+.alertdiv {
+  text-align: center;
+}
+.calendar {
+  padding: 0 100px 0;
+}
+.commenttoday {
+  padding: 85px 0 85px;
+}
+p, .right h3{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.profile img {
+  border: 12px solid #0086B9;
+  max-width: 70%;
+  max-width: 70%;
+}
+
+.moodtoday img {
+  max-width: 70%;
+  max-width: 70%;
+}
+
+.profile {
+  text-align: center;
+  padding: 0 0 60px;
+}
+
+.moodtoday {
+  text-align: center;
+  padding: 0 0 60px;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+.flex-grid-thirds .col {
+  width: 14%;
+  height: 80px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.left {
+    height: 100%;
+    width: 30%;
+    position: relative;
+    float: left;
+    padding: 100px;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+.right {
+    height: 100%;
+    width: 70%;
+    position: relative;
+    float: right;
+    padding: 50px;
+    overflow-x: hidden;
+    background-color: #FFF799;
+}
+/* @media (max-width: 400px) {
+  .flex-grid,
+  .flex-grid-thirds {
+    display: block;
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+} */
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+/* body {
+  padding: 20px;
+} */
+
+.grid-element {
+  padding: 25px 0 0 0;
+} 
+
+.angry {
+  background-color: #FF6E03;
+}
+
+.happy {
+  background-color: #8BBE01;
+}
+
+.present {
+  background-color: #5720A8;
+}
+
+.sad {
+  background-color: #0086B9;
+}
+
+.incomp {
+  background-color: #9B9B9B;
+}
