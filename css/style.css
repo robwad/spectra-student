@@ -27,21 +27,26 @@ body{
 	background-color: black;
 }
 
-/* class */
-/*.sc{
-	width: 100%;
-	height: 100%;
-	display: block;
-	z-index: 10;
-	max-width: 30%;
-	margin: 0 auto;
-	background-image: url("../images/background.jpeg");
+textarea {
+	width: 80%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    margin-top: 50px;
 }
-.sc.selected{
-	display: block;
-	z-index: 11;
-}*/
 
+
+#moodcontainer {
+	width:100%;
+	height:100%;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
 .sc{
 	width: 100%;
 	height: 100%;
@@ -54,15 +59,54 @@ body{
 	z-index: 11;
 }
 
-.newMood {
-	
+#newMood {
+	width: 50%;
+	height: 30%;
+	color: #545454;
+	text-align: center;
+	font-size: 50px;
+	margin: 0 auto;
+	position: center;
+	border: 4px solid black;
+	border-radius: 24px;
+	font-family: Comic Sans MS;
+
 }
 .dropdown {
 	justify-content: flex-end;
 	margin-right: 0px;
 	display: flex;
+
+}
+.dropdown-content{
+	display: none;
+    position: absolute;
+    margin-top: 50px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    font-size:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family:Comic Sans MS;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid grey;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
 .hamburger{
 	background:none;
 	top:0;
@@ -78,32 +122,143 @@ body{
 	z-index:10000000000000;
 }
 
-
 .feeling{
-
+	border: none;
+    display: block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
 }
 .type {
+	border: 4px solid black;
+    display: block;
+    padding: 16px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 20px;
+    white-space: nowrap;
+    background-color: white;
+    width:50%;
+    margin-top: 30px
 
 }
 .submit {
-
+    border: none;
+    display: block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    width:100%;
+    padding-bottom: 20px;
+	padding-top: 20px;
+	margin-top: 30px;
 }
 
-/* id */
-#home{
+.back {
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-family: Comic Sans MS;
+	font-weight: bold;
+}
+.feels {
+	border: 4px solid black;
+    display: block;
+    padding: 16px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 20px;
+    white-space: nowrap;
+    border-radius: 8px;
+    background-color: white;
+    width: 50%;
+    margin-top: 30px
+}
 
+.feelscontainer{
+	justify-content: center;
+	display: flex;
+	width: 100%;
+	height:100%;
+	align-items:center;
+	flex-direction: column;
+}
+.feels:first-child{
+	margin-top: 0px;
+}
+.typecontainer{
+	justify-content: center;
+	display: flex;
+	width: 100%;
+	height:100%;
+	align-items:center;
+	flex-direction: column;
+}
+#home{
+	background: url("../images/background.jpg")no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
 }
 #FeelingScreen{
-	background: #2C3E50;
+	background: url("../images/background.jpg")no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
 }
 #TypeScreen{
-	background: #E74C3C;
+	background: url("../images/background.jpg")no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
 }
 #BecauseScreen{
-	background: #3498DB;
+	background: url("../images/background.jpg")no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
 }
 
-#home ul{
+ul{
 	width: 100%;
 	height: 100%;
 	text-align: center;
@@ -117,7 +272,7 @@ body{
 	border-radius: 6px;;
 }
 header{
-	height: 44px;
+	height: 80px;
 	background: rgba(255,255,255,.9);
 	position: relative;
 	font-family: sans-serif;
@@ -126,6 +281,11 @@ header{
 header h1{
 	text-align: center;
 	line-height: 44px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	font-family: Comic Sans MS;
+	text-align: center;
+	font-size: 20px
 }
 header a{
 	position: absolute;

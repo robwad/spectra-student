@@ -22,47 +22,54 @@
 
 	<body>
 		<div id="home" class="sc selected">
-			<div class="newMood">
-				<button page-load="FeelingScreen">New Mood</button>
-			</div>
 			<div class="dropdown">
 				<button class="hamburger">&#9776;</button>
+				<div class="dropdown-content">
+					<a>Alert Teacher</a>
+					<a>Share Settings</a>
+					<a>Class Mood</a>
+				</div>
 			</div>
+			
+			<div id="moodcontainer">
+				<button id="newMood" class="link slideleft" page-load="FeelingScreen">New Mood</button>
+			</div>
+			
 		</div>
 	
 		<div id="FeelingScreen" class="sc">
 			<header>
-				<a class="back link slideright" page-load="home">Back</a>
+				<a class="link slideright back" page-load="home">Back</a>
 				<h1>I'm Feeling...</h1>
-				<ul>
-					<li class="feeling" page-load="TypeScreen">Present</li>
-					<li class="feeling" page-load="TypeScreen">Sad</li>
-					<li class="feeling" page-load="TypeScreen">Happy</li>
-					<li class="feeling" page-load="TypeScreen">Angry</li>
-				</ul>
 			</header>
+			<div class="feelscontainer">
+				<div class="link slideleft feels" page-load="TypeScreen">Present</div>
+				<div class="link slideleft feels" page-load="TypeScreen">Sad</div>
+				<div class="link slideleft feels" page-load="TypeScreen">Happy</div>
+				<div class="link slideleft feels" page-load="TypeScreen">Angry</div>
+			</div>
+				
 		</div>
 
-		<div id="TypeScreen" page-load="sc">
+		<div id="TypeScreen" class="sc">
 			<header>
-				<a class="back link " page-load="FeelingScreen">Back</a>
-				<h1>What type of ____?</h1>
-				<ul>
-					<li class="type" page-load="BecauseScreen">type1</li>
-					<li class="type" page-load="BecauseScreen">type2</li>
-					<li class="type" page-load="BecauseScreen">type3</li>
-				</ul>
+				<a class="link slideright back" page-load="FeelingScreen">Back</a>
+				<h1>What type of feeling?</h1>
 			</header>
+			<div class="typecontainer">
+				<li class="link slideleft type" page-load="BecauseScreen">type1</li>
+				<li class="link slideleft type" page-load="BecauseScreen">type2</li>
+				<li class="link slideleft type" page-load="BecauseScreen">type3</li>
+			</div>
 		</div>
 
 		<div id="BecauseScreen" class="sc">
 			<header>
-				<a class="back link " page-load="TypeScreen">Back</a>
-				<h1>You're feeling ___. Why?</h1>
+				<a class="link slideright back" page-load="TypeScreen">Back</a>
+				<h1>Why so?</h1>
 				<textarea name="description" required placeholder="Why do you feel that way? Tell me more!"></textarea>
-				<input class="submit" type="submit" name="submit">
+				<input class="submit link slideleft" type="submit" name="submit" page-load="home">
 			</header>
 		</div>
-		
 	</body>
 </html>
