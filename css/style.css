@@ -13,13 +13,6 @@ header {
 	padding-left: 100px;
 }
 
-div {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-}
-
 /*tags*/
 html, body{
     width: 100%;
@@ -35,7 +28,7 @@ body{
 }
 
 /* class */
-.sc{
+/*.sc{
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -44,16 +37,29 @@ body{
 	margin: 0 auto;
 	background-image: url("../images/background.jpeg");
 }
-/*.sc.selected{
+.sc.selected{
 	display: block;
 	z-index: 11;
 }*/
+
+.sc{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+.sc.selected{
+	display: block;
+	z-index: 11;
+}
+
 .newMood {
 	
 }
 .dropdown {
 	justify-content: flex-end;
-	margin-right: 10px;
+	margin-right: 0px;
 	display: flex;
 }
 
@@ -71,20 +77,7 @@ body{
 	outline:none;
 	z-index:10000000000000;
 }
-.cross{
-	background:none;
-	top:0px;
-	right:0;
-	padding:7px 15px 0px 15px;
-	color:#999;
-	border:0;
-	font-size:3em;
-	line-height:65px;
-	font-weight:bold;
-	cursor:pointer;
-	outline:none;
-	z-index:10000000000000;
-}
+
 
 .feeling{
 
@@ -98,8 +91,7 @@ body{
 
 /* id */
 #home{
-	/*background: blue;*/
-	
+
 }
 #FeelingScreen{
 	background: #2C3E50;
@@ -141,3 +133,4 @@ header a{
 	top: 0;
 	left: 11px;
 }
+
