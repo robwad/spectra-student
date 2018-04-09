@@ -67,9 +67,10 @@ textarea {
 	font-size: 50px;
 	margin: 0 auto;
 	position: center;
+	background-color: none;
 	/*border-radius: 24px;*/
 	font-family: Comic Sans MS;
-	margin-top: 50px;
+	margin-top: 60px;
 }
 
 .dropdown {
@@ -366,7 +367,6 @@ header a{
 	top: 0;
 	left: 11px;
 }
-
 
 /*checkbox*/
 #teacher_checkbox_container{
