@@ -22,55 +22,133 @@
 	</head>	
 
 	<body>
+		<!-- home screen -->
 		<div id="home" class="sc selected">
 			<div class="dropdown">
 				<button class="hamburger">&#9776;</button>
 				<div class="dropdown-content">
 					<a>Alert Teacher</a>
-					<a>Share Settings</a>
+					<a class="link slideleft" page-load="ShareScreen">Share Settings</a>
 					<a>Class Mood</a>
 					<a href="../spectra-student/html/teacher.html">Teacher UI</a>
 				</div>
 			</div>
 			
 			<div id="moodcontainer">
-				<button id="newMood" class="link slideleft" page-load="FeelingScreen">New Mood!</button>
+				<button id="newMood" class="link slideleft" page-load="FeelingScreen">New Mood</button>
 			</div>
 		</div>
-	
+		
+		<!-- I'm feeling screen -->
 		<div id="FeelingScreen" class="sc">
 			<header>
 				<a class="link slideright back" page-load="home">Back</a>
 				<h1>I'm Feeling...</h1>
 			</header>
 			<div class="feelscontainer">
-				<div class="link slideleft feels" page-load="TypeScreen">Present</div>
-				<div class="link slideleft feels" page-load="TypeScreen">Sad</div>
-				<div class="link slideleft feels" page-load="TypeScreen">Happy</div>
-				<div class="link slideleft feels" page-load="TypeScreen">Angry</div>
+				<div class="link slideleft feels" page-load="ReadyScreen" style="color:green;">Ready</div>
+				<div class="link slideleft feels" page-load="SadScreen" style="color:blue;">Sad</div>
+				<div class="link slideleft feels" page-load="HappyScreen" style="color:orange;">Happy</div>
+				<div class="link slideleft feels" page-load="AngryScreen" style="color:purple;">Angry</div>
 			</div>
 				
 		</div>
-
-		<div id="TypeScreen" class="sc">
+		
+		<!-- Ready Screen -->
+		<div id="ReadyScreen" class="sc TypeScreen">
 			<header>
 				<a class="link slideright back" page-load="FeelingScreen">Back</a>
-				<h1>What type of feeling?</h1>
+				<h1>What type of Ready?</h1>
 			</header>
 			<div class="typecontainer">
-				<li class="link slideleft type" page-load="BecauseScreen">type1</li>
-				<li class="link slideleft type" page-load="BecauseScreen">type2</li>
-				<li class="link slideleft type" page-load="BecauseScreen">type3</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f60c present</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1F914 focused</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1F913 curious</li>
 			</div>
 		</div>
 
-		<div id="BecauseScreen" class="sc">
+		<!-- Sad Screen -->
+		<div id="SadScreen" class="sc TypeScreen">
+			<header>
+				<a class="link slideright back" page-load="FeelingScreen">Back</a>
+				<h1>What type of Sad?</h1>
+			</header>
+			<div class="typecontainer">
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f633 lonely</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f625 hopeless</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f62d grief</li>
+			</div>
+		</div>
+		
+		<!-- Happy Screen -->
+		<div id="HappyScreen" class="sc TypeScreen">
+			<header>
+				<a class="link slideright back" page-load="FeelingScreen">Back</a>
+				<h1>What type of Happy?</h1>
+			</header>
+			<div class="typecontainer">
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f600 carefree</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f64f grateful</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f604 excited</li>
+			</div>
+		</div>
+		
+		<!-- Angry screen -->
+		<div id="AngryScreen" class="sc TypeScreen">
+			<header>
+				<a class="link slideright back" page-load="FeelingScreen">Back</a>
+				<h1>What type of Angry?</h1>
+			</header>
+			<div class="typecontainer">
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f630 stressed</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f624 frustrated</li>
+				<li class="link slideleft type" page-load="BecauseScreen">&#x1f621 furious</li>
+			</div>
+		</div>
+
+		<!-- Because? screen -->
+		<div id="BecauseScreen" class="sc TypeScreen">
 			<header>
 				<a class="link slideright back" page-load="TypeScreen">Back</a>
 				<h1>Why so?</h1>
 				<textarea name="description" required placeholder="Why do you feel that way? Tell me more!"></textarea>
 				<input class="submit link slideleft" type="submit" name="submit" page-load="home">
 			</header>
+		</div>
+
+		<!-- share settings screen -->
+		<div id="ShareScreen" class="sc">
+			<header>
+				<a class="link slideright back" page-load="home">Back</a>
+				<h1>Share Settings</h1>
+			</header>
+			<div class="teacher_checkbox_container">
+				<label class="container">Mrs.Jameson
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+
+				<label class="container">Mr.Smith
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+
+				<label class="container">Ms.Jivraj
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+
+				<label class="container">Ms.Carroll
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+
+				<label class="container">Mr.Banton
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="home">
+			</div>
 		</div>
 	</body>
 </html>
