@@ -27,9 +27,9 @@
 			<div class="dropdown">
 				<button class="hamburger">&#9776;</button>
 				<div class="dropdown-content">
-					<a>Alert Teacher</a>
+					<a class="link slideleft" page-load="AlertScreen">Alert Teacher</a>
 					<a class="link slideleft" page-load="ShareScreen">Share Settings</a>
-					<a>Class Mood</a>
+					<a class="link slideleft" page-load="ClassScreen">Class Mood</a>
 					<a href="../spectra-student/html/teacher.html">Teacher UI</a>
 				</div>
 			</div>
@@ -122,24 +122,7 @@
 				<a class="link slideright back" page-load="home">Back</a>
 				<h1>Share Settings</h1>
 			</header>
-			<div class="teacher_checkbox_container">
-				<li class="link slideleft type" page-load="BecauseScreen">Mrs.Jameson</li>
-				<li class="link slideleft type" page-load="BecauseScreen">Mr.Smith</li>
-				<li class="link slideleft type" page-load="BecauseScreen">Ms.Jivraj</li>
-				<li class="link slideleft type" page-load="BecauseScreen">Ms.Carroll</li>
-				<li class="link slideleft type" page-load="BecauseScreen">Mr.Banton</li>
-				
-				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="home">
-			</div>
-		</div>
-
-		<!-- class mood screen -->
-		<div id="ClassScreen" class="sc">
-			<header>
-				<a class="link slideright back" page-load="home">Back</a>
-				<h1 style="color:blue;">Class Mood</h1>
-			</header>
-			<div class="teacher_container">
+			<div id="teacher_checkbox_container">
 				<label class="container">Mrs.Jameson
 				  	<input type="checkbox">
 				  	<span class="checkmark"></span>
@@ -167,5 +150,81 @@
 				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="home">
 			</div>
 		</div>
+
+		<!-- alert teachers screen -->
+		<div id="AlertScreen" class="sc">
+			<header>
+				<a class="link slideright back" page-load="home">Back</a>
+				<h1>Alert Teachers</h1>
+			</header>
+			<div id="teacher_checkbox_container">
+				<label class="container">Mrs.Jameson
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+
+				<label class="container">Mr.Smith
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+
+				<label class="container">Ms.Jivraj
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+
+				<label class="container">Ms.Carroll
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+
+				<label class="container">Mr.Banton
+				  	<input type="checkbox">
+				  	<span class="checkmark"></span>
+				</label>
+				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="ConfirmationScreen">
+			</div>
+		</div>
+		
+		<!-- confirmation screen -->
+		<div id="ConfirmationScreen" class="sc">
+			<header>
+				<a class="link slideright back" page-load="home">Back</a>
+				<h1>Alert Teachers</h1>
+			</header>
+			<div id="teacher_checkbox_container">
+	
+				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="home">
+			</div>
+		</div>
+
+		<!-- class mood screen -->
+		<div id="ClassScreen" class="sc">
+			<header>
+				<a class="link slideright back" page-load="home">Back</a>
+				<h1 style="color:blue;">Class Mood</h1>
+			</header>
+			<div class="teacher_container">
+				<li class="link slideleft type" page-load="StatScreen">Mrs.Jameson</li>
+				<li class="link slideleft type" page-load="StatScreen">Mr.Smith</li>
+				<li class="link slideleft type" page-load="StatScreen">Ms.Jivraj</li>
+				<li class="link slideleft type" page-load="StatScreen">Ms.Carroll</li>
+				<li class="link slideleft type" page-load="StatScreen">Mr.Banton</li>
+				<!-- <input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="home"> -->
+			</div>
+		</div>
+
+		<!-- stat screen -->
+		<div id="StatScreen" class="sc">
+			<header>
+				<a class="link slideright back" page-load="ClassScreen">Back</a>
+				<h1>Class Mood</h1>
+			</header>
+
+			<div id="img_container">
+				<img src="images/place.jpg">
+			</div>
+		</div>
+
 	</body>
 </html>
