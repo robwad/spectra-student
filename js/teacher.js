@@ -15,7 +15,7 @@ let students = [
     comment: null,
     alert: false,
     visible: true,
-    mood: null
+    mood: ["😔", "sad"]
   },
   {
     name: "Lizzie",
@@ -178,9 +178,44 @@ function renderStudents(studs) {
 </div>`
 }
 
-function render(classview) {
+function renderClass(classview) {
+  // insert html into classroom
   let classElm = document.querySelector('.classroom');
-  classElm.innerHTML = renderStudents(classview)
-  let squares = document.querySelectorAll(".flex-grid-thirds .grid-element")
-  squares.forEach(el => el.addEventListener('click', currentStudent = el.name ))
+  classElm.innerHTML = renderStudents(classview);
+  // record which student is clicked
+  let squares = document.querySelectorAll(".flex-grid-thirds .grid-element");
+  squares.forEach(el => el.addEventListener('click', currentStudent = el.name ));
+}
+
+// profile rendering
+function insertProfile(stud) {
+  return `<img src="../images/aug3.png">
+  <h1>${stud.name}</h1>`
+}
+
+function renderProfile(stud) {
+  let profElm = document.querySelector('.profile');
+  profElm.innerHTML = insertProfile(stud);
+}
+
+// mood rendering
+function insertMood(stud) {
+  return `<p>${stud.mood[0]}</p>
+  <h1>${stud.mood[1]}</h1>`
+}
+
+function renderMood(stud) {
+  let moodElm = document.querySelector('.moodtoday');
+  moodElm.innerHTML = insertMood(stud);
+}
+
+// comment rendering
+function insertComment(stud) {
+  return `<h3>Today's Comment</h3>
+  <p>06/26 Lorem ipsum dolor sit amet, consectetuer</p>`
+}
+
+function renderComment(stud) {
+  let commentElm = document.querySelector('.commenttoday');
+  commentElm.innerHTML = insertComment(stud);
 }
