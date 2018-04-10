@@ -5,31 +5,34 @@ a {
 .sidenav-trigger {
   color: white;
   font-size: 1.5em;
+  padding: 0 0 0 40px;
 }
 .header h3 {
   text-align: center;
-  padding: 10px 0 0 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
-  background-color: #0584bd;
+  background-color: #9B9B9B;
 }
+
 .classroom {
   padding: 20px 100px 20px;
   /* background-color: #4aa4af; */
-  background-color: #FFF799
+  background-color: #D8D8D8
 }
 
 .flex-grid-thirds {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 20px;
+  margin: 0 0 60px;
 }
 .flex-grid-thirds .col {
-  width: 14%;
+  width: 12%;
   height: 130px;
   text-align: center;
   font-size: 1.5em;
+  border-radius: 20%;
 }
 
 /* @media (max-width: 400px) {
@@ -60,23 +63,23 @@ a {
 } 
 
 .angry {
-  background-color: #FF6E03;
+  background: linear-gradient(to left, #D9C2FA, #5720A8)
 }
 
 .happy {
-  background-color: #8BBE01;
+  background: linear-gradient(to bottom, #FFC69D, #F76B1C)
 }
 
 .present {
-  background-color: #5720A8;
+  background: linear-gradient(to top, #DCFB89, #8BBE01)
 }
 
 .sad {
-  background-color: #0086B9;
+  background: linear-gradient(to right, #87DAFA, #0086B9)
 }
 
 .incomp {
-  background-color: #9B9B9B;
+  background: linear-gradient(to right, rgb(194, 188, 188), gray)
 }
 
 .req {
