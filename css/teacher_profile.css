@@ -17,12 +17,18 @@
 .alertdiv {
   text-align: center;
 }
+
+.left p {
+  font-size: 6em;
+}
 .calendar {
   padding: 0 100px 0;
 }
+
 .commenttoday {
   padding: 85px 0 85px;
 }
+
 p, .right h3{
   text-align: center;
   font-size: 1.5em;
@@ -32,16 +38,16 @@ p, .right h3{
   border: 12px solid #0086B9;
   max-width: 70%;
   max-width: 70%;
+  border-radius: 50%;
 }
 
-.moodtoday img {
+/* .moodtoday img {
   max-width: 70%;
   max-width: 70%;
-}
+} */
 
 .profile {
   text-align: center;
-  padding: 0 0 60px;
 }
 
 .moodtoday {
@@ -77,7 +83,7 @@ p, .right h3{
     float: right;
     padding: 50px;
     overflow-x: hidden;
-    background-color: #FFF799;
+    background-color: #D8D8D8;
 }
 /* @media (max-width: 400px) {
   .flex-grid,
@@ -105,21 +111,21 @@ p, .right h3{
 } 
 
 .angry {
-  background-color: #FF6E03;
+  background: linear-gradient(to left, #D9C2FA, #5720A8)
 }
 
 .happy {
-  background-color: #8BBE01;
+  background: linear-gradient(to bottom, #FFC69D, #F76B1C)
 }
 
 .present {
-  background-color: #5720A8;
+  background: linear-gradient(to top, #DCFB89, #8BBE01)
 }
 
 .sad {
-  background-color: #0086B9;
+  background: linear-gradient(to right, #87DAFA, #0086B9)
 }
 
 .incomp {
-  background-color: #9B9B9B;
+  background: linear-gradient(to right, rgb(194, 188, 188), gray)
 }
