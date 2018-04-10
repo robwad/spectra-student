@@ -111,8 +111,8 @@
 			<header>
 				<a class="link slideright back" page-load="TypeScreen">Back</a>
 				<h1>Why so?</h1>
-				<textarea name="description" required placeholder="Why do you feel that way? Tell me more!"></textarea>
-				<input class="submit link slideleft" type="submit" name="submit" page-load="home">
+				<textarea id="reason" name="description" required placeholder="Why do you feel that way? (limit 40 characters - come speak to me if you want)"></textarea>
+				<input class="submit link slideleft" type="submit" id="submit_reason" page-load="home">
 			</header>
 		</div>
 
@@ -182,19 +182,17 @@
 				  	<input type="checkbox">
 				  	<span class="checkmark"></span>
 				</label>
-				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="ConfirmationScreen">
-			</div>
-		</div>
-		
-		<!-- confirmation screen -->
-		<div id="ConfirmationScreen" class="sc">
-			<header>
-				<a class="link slideright back" page-load="home">Back</a>
-				<h1>Alert Teachers</h1>
-			</header>
-			<div id="teacher_checkbox_container">
-	
-				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="home">
+				<input class="submit" type="submit" name="submit_share_setting" id="myBtn">
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+				  <!-- Modal content -->
+				  	<div class="modal-content">
+				    	<p>The teacher will be notified. Are you sure?</p>
+				    	<button class="confirm">Yes</button>
+				    	<button class="cancel">Cancel</button>
+				  	</div>
+				</div>
+				<!-- page-load="ConfirmationScreen" -->
 			</div>
 		</div>
 
@@ -222,7 +220,7 @@
 			</header>
 
 			<div id="img_container">
-				<img src="images/place.jpg">
+				<img src="images/class_mood.png">
 			</div>
 		</div>
 
