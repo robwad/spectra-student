@@ -15,13 +15,15 @@ function reason() {
 }
 
 function toggle() {
+	var mood = student.mood 
 	if (document.getElementById("check").checked) {
 		// student.visible = true;
-		console.log("checkbox is checked");
-		// console.log(student.visible);
+		student.mood = mood;
+		console.log(student.mood);
 	}
 	else {
-		// student.visible = false;
+		console.log("unchecked")
+		student.mood = ["invisible"];
 	}
 }
 
@@ -48,8 +50,14 @@ $(document).ready(function() {
 
 	confirm.onclick = function() {
 		modal.style.display = "none";
+		if (document.getElementById("jameson").checked) {
+			student.alert = true;
+		}
+		else{
+			student.alert = false;
+		}
 		console.log("Teacher has been notified");
-		student.alert = true;
+		
 	}
 
 	// When the user clicks anywhere outside of the modal, close it
@@ -59,79 +67,61 @@ $(document).ready(function() {
 	    }
 	}
 
-	function present() {
-		student.mood = [present];
-		console.log("present clicked");
-	}
 	var present = document.getElementById("present");
 	present.onclick = function() {
 		student.mood = [present.textContent];
 		console.log("present clicked");
-		console.log(student.mood);
 	}
 	var focused = document.getElementById("focused");
 	focused.onclick = function() {
-		student.mood = [focused];
+		student.mood = [focused.textContent];
 		console.log("focused clicked")
 	}
 	var curious = document.getElementById("curious");
 	curious.onclick = function() {
-		student.mood = [curious];
+		student.mood = [curious.textContent];
 	}
 	var lonely = document.getElementById("lonely");
 	lonely.onclick = function() {
-		student.mood = [lonely];
+		student.mood = [lonely.textContent];
 	}
 	var hopeless = document.getElementById("hopeless");
 	hopeless.onclick = function() {
-		student.mood = [hopeless];
+		student.mood = [hopeless.textContent];
 	}
 	var grief = document.getElementById("grief");
 	grief.onclick = function() {
-		student.mood = [grief];
+		student.mood = [grief.textContent];
 	}
 	var carefree = document.getElementById("carefree");
 	carefree.onclick = function() {
-		student.mood = [carefree];
+		student.mood = [carefree.textContent];
 	}
 	var grateful = document.getElementById("grateful");
 	grateful.onclick = function() {
-		student.mood = [grateful];
+		student.mood = [grateful.textContent];
 	}
 	var excited = document.getElementById("excited");
 	excited.onclick = function() {
-		student.mood = [excited];
+		student.mood = [excited.textContent];
 	}
 	var stressed = document.getElementById("stressed");
 	stressed.onclick = function() {
-		student.mood = [stressed];
+		student.mood = [stressed.textContent];
 	}
 	var frustrated = document.getElementById("frustrated");
 	frustrated.onclick = function() {
-		student.mood = [frustrated];
+		student.mood = [frustrated.textContent];
 	}
 	var furious = document.getElementById("furious");
 	furious.onclick = function() {
-		student.mood = [furious];
+		student.mood = [furious.textContent];
 	}
 
-	// function toggle() {
-	// 	if (document.getElementById("check").checked) {
-	// 		student.visible = true;
-	// 		console.log("checked")
-	// 	}
-	// 	else {
-	// 		student.visible = false;
-	// 	}
-	// }
-	// add the updated student to the students list
 	students.push(student)
 
-	// console.log(students)
-	// console.log(student)
-
 	localStorage.setItem("students", JSON.stringify(students));
-	// localStorage.setItem("students", JSON.stringify(students));
+
 	$(".link").fastClick(function () {
 		screen = "#" + $(this).attr("page-load");
 		if($(this).hasClass("none")){
@@ -161,37 +151,4 @@ $(document).ready(function() {
 	})
 });
 
-function reason() {
-	console.log("reason clicked");
-	student.comment = document.getElementById("reason").value;
-	console.log(student.comment);
-}
-
-function toggle() {
-	if (document.getElementById("check").checked) {
-		student.mood = ["visible"]
-		student.visible = true;
-		console.log("checked");
-		console.log(student.visible);
-	}
-	else {
-		student.mood = ["invisible"];
-	}
-}
-
-console.log(student)
-// var present = document.getElementById("present");
-// present.onclick = function() {
-// 	student.mood = [present];
-// 	console.log("present clicked");
-// }
-
-// var present = document.getElementsByClassName("present")[0];
-// present.onclick = function() {
-// 	student.mood = [present];
-// 	console.log("present clicked");
-// }
-
 localStorage.setItem("students", JSON.stringify(students));
-
-console.log(student)
