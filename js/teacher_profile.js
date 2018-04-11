@@ -34,8 +34,6 @@ function renderComment(stud) {
   commentElm.innerHTML = insertComment(stud);
 }
 
-//!! specify name of item
-let currentprofile = localStorage.getItem()
 
 // renderProfile(currentprofile);
 // renderMood(currentprofile);

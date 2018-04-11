@@ -175,21 +175,22 @@ function renderAlert() {
   // alertbool = 
   if (alertbool) {
     //!! needs a way of positioning this in correct part of html
-    let alertElm = document.querySelector('   ')
-    alertElm.innerHTML = insertAlert()
+    let alertElm = document.querySelector('   ');
+    alertElm.innerHTML = insertAlert();
   }
 }
 
 function editJen() {
   //!! need to add name that kev uses
-  let storedJen = localStorage.getItem('students')
+  let currentJen = students[12];
+  let storedJen = localStorage.getItem('students');
   if (storedJen != null) {
     currentJen = JSON.parse(storedJen); 
   }
-  students[12].name = currentJen.name
-  students[12].comment = currentJen.comment
-  students[12].alert = currentJen.alert
-  students[12].mood = currentJen.mood
+  students[12].name = currentJen.name;
+  students[12].comment = currentJen.comment;
+  students[12].alert = currentJen.alert;
+  students[12].mood = currentJen.mood;
 }
 editJen();
 renderClass(students);
