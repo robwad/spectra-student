@@ -9,7 +9,7 @@ let student = 	{
 }
 
 function reason() {
-	console.log("reason button clicked - student's reason is stored");
+	console.log("reason button clicked student's reason is stored");
 	student.comment = document.getElementById("reason").value;
 	console.log(student.comment);
 }
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
 	confirm.onclick = function() {
 		modal.style.display = "none";
-		console.log("well done");
+		console.log("Mrs. Jameson notified");
 		student.alert = true;
 	}
 
@@ -174,12 +174,12 @@ function reason() {
 
 function toggle() {
 	if (document.getElementById("check").checked) {
-		student.mood = [invisible]
+		student.mood = ["visible"]
 		console.log("checked");
 		console.log(student.visible);
 	}
 	else {
-		student.visible = false;
+		student.mood = ["invisible"];
 	}
 }
 
