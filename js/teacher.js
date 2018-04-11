@@ -184,6 +184,7 @@ function editJen() {
   //!! need to add name that kev uses
   let currentJen = students[12];
   let storedJen = localStorage.getItem('students');
+  console.log(storedJen);
   if (storedJen != null) {
     currentJen = JSON.parse(storedJen); 
   }
