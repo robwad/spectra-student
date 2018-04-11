@@ -1,4 +1,14 @@
 $(document).ready(function() {
+	let students = []
+
+	let student = 	{
+		name: Jane,
+		comment: "",
+		alert: false,
+		visible: false,
+		mood: []
+	}
+
 	// Get the modal
 	var modal = document.getElementById('myModal');
 
@@ -9,7 +19,6 @@ $(document).ready(function() {
 	var confirm = document.getElementsByClassName("confirm")[0];
 
 	var cancel =  document.getElementsByClassName("cancel")[0];
-	console.log(confirm,cancel)
 	// When the user clicks the button, open the modal 
 	btn.onclick = function() {
 	    modal.style.display = "block";
@@ -20,19 +29,9 @@ $(document).ready(function() {
 	    modal.style.display = "none";
 	}
 
-	// let today = {
-	// 	mood: null;
-	// 	text: null;
-	// 	privacy: {
-
-	// 	};
-	// 	alert: {
-
-	// 	};
-	// }
 	confirm.onclick = function() {
 		modal.style.display = "none";
-		// localStorage.setItem("key", JSON.stringify(student));
+		student.alert = true;
 	}
 
 	// When the user clicks anywhere outside of the modal, close it
@@ -43,14 +42,64 @@ $(document).ready(function() {
 	}
 
 	var reason = document.getElementById("submit_reason");
+
 	reason.onclick = function() {
-		// today.mood = 
-		today.text = document.getElementById("reason").value;
-		// localStorage.setItem("state",JSON.stringify(days))
+		student.comment = document.getElementById("reason").value;
 	}
 
+	var present = document.getElementById("present");
+	present.onclick = function() {
+		student.mood = [&#x1f60c, present];
+	}
+	var focused = document.getElementById("focused");
+	focused.onclick = function() {
+		student.mood = [&#x1F914, focused];
+	}
+	var curious = document.getElementById("curious");
+	curious.onclick = function() {
+		student.mood = [&#x1F913, curious];
+	}
+	var lonely = document.getElementById("lonely");
+	lonely.onclick = function() {
+		student.mood = [&#x1f633, lonely];
+	}
+	var hopeless = document.getElementById("hopeless");
+	hopeless.onclick = function() {
+		student.mood = [&#x1f625, hopeless];
+	}
+	var grief = document.getElementById("grief");
+	grief.onclick = function() {
+		student.mood = [&#x1f62d, grief];
+	}
+	var carefree = document.getElementById("carefree");
+	carefree.onclick = function() {
+		student.mood = [&#x1f600, carefree];
+	}
+	var grateful = document.getElementById("grateful");
+	grateful.onclick = function() {
+		student.mood = [&#x1f64f, grateful];
+	}
+	var excited = document.getElementById("excited");
+	excited.onclick = function() {
+		student.mood = [&#x1f604, excited];
+	}
+	var stressed = document.getElementById("stressed");
+	stressed.onclick = function() {
+		student.mood = [&#x1f630, stressed];
+	}
+	var frustrated = document.getElementById("frustrated");
+	frustrated.onclick = function() {
+		student.mood = [&#x1f624, frustrated];
+	}
+	var furious = document.getElementById("furious");
+	furious.onclick = function() {
+		student.mood = [&#x1f621, furious];
+	}
 
+	// add the updated student to the students list
+	students.append(student)
 
+	localStorage.setItem("students", JSON.stringify(students));
 
 	$(".link").fastClick(function () {
 		screen = "#" + $(this).attr("page-load");
