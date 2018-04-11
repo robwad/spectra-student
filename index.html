@@ -61,9 +61,9 @@
 				<h1>What type of Ready?</h1>
 			</header>
 			<div class="typecontainer">
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f60c present</li>
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1F914 focused</li>
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1F913 curious</li>
+				<button class="link slideleft type present" page-load="BecauseScreen" id="present" onclick="present()">&#x1f60c present</button>
+				<li class="link slideleft type" page-load="BecauseScreen" id="focused">&#x1F914 focused</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="curious">&#x1F913 curious</li>
 			</div>
 		</div>
 
@@ -74,9 +74,9 @@
 				<h1>What type of Sad?</h1>
 			</header>
 			<div class="typecontainer">
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f633 lonely</li>
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f625 hopeless</li>
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f62d grief</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="lonely">&#x1f633 lonely</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="hopeless">&#x1f625 hopeless</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="grief">&#x1f62d grief</li>
 			</div>
 		</div>
 		
@@ -87,9 +87,9 @@
 				<h1>What type of Happy?</h1>
 			</header>
 			<div class="typecontainer">
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f600 carefree</li>
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f64f grateful</li>
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f604 excited</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="carefree">&#x1f600 carefree</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="grateful">&#x1f64f grateful</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="excited">&#x1f604 excited</li>
 			</div>
 		</div>
 		
@@ -100,19 +100,19 @@
 				<h1>What type of Angry?</h1>
 			</header>
 			<div class="typecontainer">
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f630 stressed</li>
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f624 frustrated</li>
-				<li class="link slideleft type" page-load="BecauseScreen">&#x1f621 furious</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="stressed">&#x1f630 stressed</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="frustrated">&#x1f624 frustrated</li>
+				<li class="link slideleft type" page-load="BecauseScreen" id="furious">&#x1f621 furious</li>
 			</div>
 		</div>
 
 		<!-- Because? screen -->
 		<div id="BecauseScreen" class="sc TypeScreen">
 			<header>
-				<a class="link slideright back" page-load="TypeScreen">Back</a>
+				<a class="link slideright back" page-load="FeelingScreen">Back</a>
 				<h1>Why so?</h1>
 				<textarea id="reason" name="description" required placeholder="Why do you feel that way? (limit 40 characters - come speak to me if you want)"></textarea>
-				<input class="submit link slideleft" type="submit" id="submit_reason" page-load="home">
+				<input class="submit link slideleft" type="submit" id="submit_reason" page-load="home" onclick="reason()">
 			</header>
 		</div>
 
@@ -124,7 +124,7 @@
 			</header>
 			<div id="teacher_checkbox_container">
 				<label class="container">Mrs.Jameson
-				  	<input type="checkbox">
+				  	<input type="checkbox" id="check">
 				  	<span class="checkmark"></span>
 				</label>
 
@@ -147,7 +147,7 @@
 				  	<input type="checkbox">
 				  	<span class="checkmark"></span>
 				</label>
-				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="home">
+				<input class="submit link slideleft" type="submit" name="submit_share_setting" page-load="home" onclick="toggle()">
 			</div>
 		</div>
 
