@@ -61,7 +61,7 @@
 				<h1>What type of Ready?</h1>
 			</header>
 			<div class="typecontainer">
-				<button class="link slideleft type" page-load="BecauseScreen" id="present">&#x1f60c present</button>
+				<button class="link slideleft type present" page-load="BecauseScreen" id="present" onclick="present()">&#x1f60c present</button>
 				<li class="link slideleft type" page-load="BecauseScreen" id="focused">&#x1F914 focused</li>
 				<li class="link slideleft type" page-load="BecauseScreen" id="curious">&#x1F913 curious</li>
 			</div>
@@ -109,7 +109,7 @@
 		<!-- Because? screen -->
 		<div id="BecauseScreen" class="sc TypeScreen">
 			<header>
-				<a class="link slideright back" page-load="TypeScreen">Back</a>
+				<a class="link slideright back" page-load="FeelingScreen">Back</a>
 				<h1>Why so?</h1>
 				<textarea id="reason" name="description" required placeholder="Why do you feel that way? (limit 40 characters - come speak to me if you want)"></textarea>
 				<input class="submit link slideleft" type="submit" id="submit_reason" page-load="home" onclick="reason()">

@@ -1,14 +1,31 @@
-$(document).ready(function() {
-	let students = []
+let students = []
 
-	let student = 	{
-		name: "Jane",
-		comment: "",
-		alert: false,
-		visible: false,
-		mood: []
+let student = 	{
+	name: "Jane",
+	comment: "",
+	alert: false,
+	visible: false,
+	mood: []
+}
+
+function reason() {
+	console.log("reason clicked");
+	student.comment = document.getElementById("reason").value;
+	console.log(student.comment);
+}
+
+function toggle() {
+	if (document.getElementById("check").checked) {
+		student.visible = true;
+		console.log("checked");
+		console.log(student.visible);
 	}
+	else {
+		student.visible = false;
+	}
+}
 
+$(document).ready(function() {
 	// Get the modal
 	var modal = document.getElementById('myModal');
 
@@ -42,17 +59,15 @@ $(document).ready(function() {
 	    }
 	}
 
-	// var reason = document.getElementById("submit_reason");
-	// reason.onclick = function() {
-	// 	var comment = document.getElementById("reason").value;
+	// function reason() {
+	// 	console.log("reason clicked");
 	// 	student.comment = document.getElementById("reason").value;
 	// }
 
-	function reason() {
-		console.log("reason clicked");
-		student.comment = document.getElementById("reason").value;
+	function present() {
+		student.mood = [present];
+		console.log("present clicked");
 	}
-
 	var present = document.getElementById("present");
 	present.onclick = function() {
 		student.mood = [present];
@@ -115,8 +130,8 @@ $(document).ready(function() {
 	// add the updated student to the students list
 	students.push(student)
 
-	console.log(students)
-	console.log(student)
+	// console.log(students)
+	// console.log(student)
 
 	localStorage.setItem("students", JSON.stringify(students));
 
@@ -147,4 +162,35 @@ $(document).ready(function() {
 			});		
 		}
 	})
-})
+});
+
+function reason() {
+	console.log("reason clicked");
+	student.comment = document.getElementById("reason").value;
+	console.log(student.comment);
+}
+
+function toggle() {
+	if (document.getElementById("check").checked) {
+		student.visible = true;
+		console.log("checked");
+		console.log(student.visible);
+	}
+	else {
+		student.visible = false;
+	}
+}
+
+// var present = document.getElementById("present");
+// present.onclick = function() {
+// 	student.mood = [present];
+// 	console.log("present clicked");
+// }
+
+// var present = document.getElementsByClassName("present")[0];
+// present.onclick = function() {
+// 	student.mood = [present];
+// 	console.log("present clicked");
+// }
+
+localStorage.setItem("students", JSON.stringify(students));
