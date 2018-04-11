@@ -59,10 +59,10 @@ $(document).ready(function() {
 	    }
 	}
 
-	// function present() {
-	// 	student.mood = [present];
-	// 	console.log("present clicked");
-	// }
+	function present() {
+		student.mood = [present];
+		console.log("present clicked");
+	}
 	var present = document.getElementById("present");
 	present.onclick = function() {
 		student.mood = [present.textContent];
