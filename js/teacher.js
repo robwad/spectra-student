@@ -182,7 +182,7 @@ function renderAlert() {
 
 function editJen() {
   //!! need to add name that kev uses
-  let storedJen = localStorage.getItem('')
+  let storedJen = localStorage.getItem('students')
   if (storedJen != null) {
     currentJen = JSON.parse(storedJen); 
   }
