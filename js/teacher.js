@@ -188,7 +188,6 @@ function editJen() {
   if (storedJen != null) {
     currentJen = JSON.parse(storedJen); 
   }
-  students[12].name = currentJen.name;
   students[12].comment = currentJen.comment;
   students[12].alert = currentJen.alert;
   // students[12].mood[1] = currentJen.mood;
