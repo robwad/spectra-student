@@ -1,180 +1,158 @@
 
-  var elem = document.querySelector('.sidenav');
-  var instance = M.Sidenav.init(elem, {});
+var elem = document.querySelector('.sidenav');
+var instance = M.Sidenav.init(elem, {});
 
 let students = [
   {
     name: "Grace",
-    comment: null,
+    comment: "I had a good ride to school",
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "lonely"]
   },
   {
     name: "Tom",
     comment: null,
     alert: false,
-    visible: true,
-    mood: ["😔", "sad"]
+    mood: [1, "grateful"]
   },
   {
     name: "Lizzie",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "curious"]
   },
   {
     name: "Jane",
     comment: null,
     alert: false,
-    visible: false,
-    mood: null
+    mood: [1, "furious"]
   },
   {
     name: "Andrew",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "lonely"]
   },
   {
     name: "Julius",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "curious"]
   },
   {
     name: "Helen",
     comment: null,
     alert: false,
-    visible: false,
-    mood: null
+    mood: [1, "furious"]
   },
   {
     name: "Julie",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "lonely"]
   },
   {
     name: "Jackson",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "grateful"]
   },
   {
     name: "Michaela",
     comment: null,
     alert: true,
-    visible: true,
-    mood: null
+    mood: [1, "curious"]
   },
   {
     name: "John",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "furious"]
   },
   {
     name: "Ashley",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "invisible"]
   },
   {
     name: "Jen",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "furious"]
   },
   {
     name: "Jacob",
     comment: null,
     alert: true,
-    visible: true,
-    mood: null
+    mood: [1, "lonely"]
   },
   {
     name: "Patricia",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "focused"]
   },
   {
     name: "Ben",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "grateful"]
   },
   {
     name: "Alex",
     comment: null,
     alert: true,
-    visible: true,
-    mood: null
+    mood: [1, "lonely"]
   },
   {
     name: "Alice",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "curious"]
   },
   {
     name: "Kevin",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "lonely"]
   },
   {
     name: "Rob",
     comment: null,
     alert: false,
-    visible: true,
-    mood: null
+    mood: [1, "invisible"]
   }
 ]
 
-var currentStudent = null;
-
 function renderStudents(studs) {
   return `<div class="flex-grid-thirds">
-  <div class="col grid-element ${studs[0].mood}"><a href="teacher_profile.html">${studs[0].name}</a></div>
-  <div class="col grid-element happy"><a href="teacher_profile.html">Grace</a></div>
-  <div class="col grid-element present"><a href="teacher_profile.html">Tom</a></div>
-  <div class="col grid-element angry req"><a href="teacher_profile.html">Lizzie</a></div>
-  <div class="col grid-element angry"><a href="teacher_profile.html">James</a></div>
+  <div class="col grid-element ${studs[0].mood[1]}"><a href="teacher_profile.html">${studs[0].name}</a></div>
+  <div class="col grid-element ${studs[1].mood[1]}"><a href="teacher_profile.html">${studs[1].name}</a></div>
+  <div class="col grid-element ${studs[2].mood[1]}"><a href="teacher_profile.html">${studs[2].name}</a></div>
+  <div class="col grid-element ${studs[3].mood[1]}"><a href="teacher_profile.html">${studs[3].name}</a></div>
+  <div class="col grid-element ${studs[4].mood[1]}"><a href="teacher_profile.html">${studs[4].name}</a></div>
 </div>
 <div class="flex-grid-thirds">
-<div class="col grid-element sad"><a href="teacher_profile.html">Henry</a></div>
-<div class="col grid-element angry"><a href="teacher_profile.html">Alice</a></div>
-<div class="col grid-element happy"><a href="teacher_profile.html">Jen</a></div>
-<div class="col grid-element angry"><a href="teacher_profile.html">Matt</a></div>
-<div class="col grid-element incomp"><a href="teacher_profile.html">Julia</a></div>
+<div class="col grid-element ${studs[5].mood[1]}"><a href="teacher_profile.html">${studs[5].name}</a></div>
+<div class="col grid-element ${studs[6].mood[1]}"><a href="teacher_profile.html">${studs[6].name}</a></div>
+<div class="col grid-element ${studs[7].mood[1]}"><a href="teacher_profile.html">${studs[7].name}</a></div>
+<div class="col grid-element ${studs[8].mood[1]}"><a href="teacher_profile.html">${studs[8].name}</a></div>
+<div class="col grid-element ${studs[9].mood[1]}"><a href="teacher_profile.html">${studs[9].name}</a></div>
 </div>
 <div class="flex-grid-thirds">
-<div class="col grid-element sad"><a href="teacher_profile.html">Christine</a></div>
-<div class="col grid-element happy req"><a href="teacher_profile.html">Jose</a></div>
-<div class="col grid-element angry"><a href="teacher_profile.html">Kevin</a></div>
-<div class="col grid-element incomp"><a href="teacher_profile.html">Tracey</a></div>
-<div class="col grid-element present"><a href="teacher_profile.html">Paula</a></div>
+<div class="col grid-element ${studs[10].mood[1]}"><a href="teacher_profile.html">${studs[10].name}</a></div>
+<div class="col grid-element ${studs[11].mood[1]}"><a href="teacher_profile.html">${studs[11].name}</a></div>
+<div class="col grid-element ${studs[12].mood[1]}"><a href="teacher_profile.html">${studs[12].name}</a></div>
+<div class="col grid-element ${studs[13].mood[1]}"><a href="teacher_profile.html">${studs[13].name}</a></div>
+<div class="col grid-element ${studs[14].mood[1]}"><a href="teacher_profile.html">${studs[14].name}</a></div>
 </div>
 <div class="flex-grid-thirds">
-  <div class="col grid-element angry"><a href="teacher_profile.html">Jack</a></div>
-  <div class="col grid-element sad"><a href="teacher_profile.html">Lucy</a></div>
-  <div class="col grid-element present"><a href="teacher_profile.html">James</a></div>
-  <div class="col grid-element happy"><a href="teacher_profile.html">Hillary</a></div>
-  <div class="col grid-element happy"><a href="teacher_profile.html">Patricia</a></div>
+<div class="col grid-element ${studs[15].mood[1]}"><a href="teacher_profile.html">${studs[15].name}</a></div>
+<div class="col grid-element ${studs[16].mood[1]}"><a href="teacher_profile.html">${studs[16].name}</a></div>
+<div class="col grid-element ${studs[17].mood[1]}"><a href="teacher_profile.html">${studs[17].name}</a></div>
+<div class="col grid-element ${studs[18].mood[1]}"><a href="teacher_profile.html">${studs[18].name}</a></div>
+<div class="col grid-element ${studs[19].mood[1]}"><a href="teacher_profile.html">${studs[19].name}</a></div>
 </div>`
 }
 
@@ -184,38 +162,36 @@ function renderClass(classview) {
   classElm.innerHTML = renderStudents(classview);
   // record which student is clicked
   let squares = document.querySelectorAll(".flex-grid-thirds .grid-element");
-  squares.forEach(el => el.addEventListener('click', currentStudent = el.name ));
+  //!! this needs to specify what to store  in local storage
+  // squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(   ))));
 }
 
-// profile rendering
-function insertProfile(stud) {
-  return `<img src="../images/aug3.png">
-  <h1>${stud.name}</h1>`
+// renders list of requested meetings
+function insertAlert() {
+  return `<li><a class="waves-effect" href="#!">Jen</a></li>`
 }
 
-function renderProfile(stud) {
-  let profElm = document.querySelector('.profile');
-  profElm.innerHTML = insertProfile(stud);
+function renderAlert() {
+  // alertbool = 
+  if (alertbool) {
+    //!! needs a way of positioning this in correct part of html
+    let alertElm = document.querySelector('   ')
+    alertElm.innerHTML = insertAlert()
+  }
 }
 
-// mood rendering
-function insertMood(stud) {
-  return `<p>${stud.mood[0]}</p>
-  <h1>${stud.mood[1]}</h1>`
-}
+function editJen() {
+  //!! need to add name that kev uses
+  let storedJen = localStorage.getItem('')
+  if (storedJen != null) {
+    currentJen = JSON.parse(storedJen); 
+  }
+  students[12].name = currentJen.name
+  students[12].comment = currentJen.comment
+  students[12].alert = currentJen.alert
+  students[12].mood = currentJen.mood
 
-function renderMood(stud) {
-  let moodElm = document.querySelector('.moodtoday');
-  moodElm.innerHTML = insertMood(stud);
 }
+renderClass(students);
+// renderAlert()
 
-// comment rendering
-function insertComment(stud) {
-  return `<h3>Today's Comment</h3>
-  <p>06/26 Lorem ipsum dolor sit amet, consectetuer</p>`
-}
-
-function renderComment(stud) {
-  let commentElm = document.querySelector('.commenttoday');
-  commentElm.innerHTML = insertComment(stud);
-}

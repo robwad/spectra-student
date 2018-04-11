@@ -59,11 +59,6 @@ $(document).ready(function() {
 	    }
 	}
 
-	// function reason() {
-	// 	console.log("reason clicked");
-	// 	student.comment = document.getElementById("reason").value;
-	// }
-
 	// function present() {
 	// 	student.mood = [present];
 	// 	console.log("present clicked");
@@ -135,8 +130,8 @@ $(document).ready(function() {
 	// console.log(students)
 	// console.log(student)
 
+	localStorage.setItem("students", JSON.stringify(students));
 	// localStorage.setItem("students", JSON.stringify(students));
-
 	$(".link").fastClick(function () {
 		screen = "#" + $(this).attr("page-load");
 		if($(this).hasClass("none")){
@@ -175,6 +170,7 @@ function reason() {
 function toggle() {
 	if (document.getElementById("check").checked) {
 		student.mood = ["visible"]
+		student.visible = true;
 		console.log("checked");
 		console.log(student.visible);
 	}
@@ -197,4 +193,5 @@ console.log(student)
 // }
 
 localStorage.setItem("students", JSON.stringify(students));
+
 console.log(student)
