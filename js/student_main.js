@@ -9,7 +9,7 @@ let student = 	{
 }
 
 function reason() {
-	console.log("reason clicked");
+	console.log("reason button clicked - student's reason is stored");
 	student.comment = document.getElementById("reason").value;
 	console.log(student.comment);
 }
@@ -17,7 +17,7 @@ function reason() {
 function toggle() {
 	if (document.getElementById("check").checked) {
 		student.visible = true;
-		console.log("checked");
+		console.log("checkbox is checked");
 		console.log(student.visible);
 	}
 	else {
@@ -64,18 +64,20 @@ $(document).ready(function() {
 	// 	student.comment = document.getElementById("reason").value;
 	// }
 
-	function present() {
-		student.mood = [present];
-		console.log("present clicked");
-	}
+	// function present() {
+	// 	student.mood = [present];
+	// 	console.log("present clicked");
+	// }
 	var present = document.getElementById("present");
 	present.onclick = function() {
-		student.mood = [present];
+		student.mood = [present.textContent];
 		console.log("present clicked");
+		console.log(student.mood);
 	}
 	var focused = document.getElementById("focused");
 	focused.onclick = function() {
 		student.mood = [focused];
+		console.log("focused clicked")
 	}
 	var curious = document.getElementById("curious");
 	curious.onclick = function() {
@@ -118,22 +120,22 @@ $(document).ready(function() {
 		student.mood = [furious];
 	}
 
-	function toggle() {
-		if (document.getElementById("check").checked) {
-			student.visible = true;
-			console.log("checked")
-		}
-		else {
-			student.visible = false;
-		}
-	}
+	// function toggle() {
+	// 	if (document.getElementById("check").checked) {
+	// 		student.visible = true;
+	// 		console.log("checked")
+	// 	}
+	// 	else {
+	// 		student.visible = false;
+	// 	}
+	// }
 	// add the updated student to the students list
 	students.push(student)
 
 	// console.log(students)
 	// console.log(student)
 
-	localStorage.setItem("students", JSON.stringify(students));
+	// localStorage.setItem("students", JSON.stringify(students));
 
 	$(".link").fastClick(function () {
 		screen = "#" + $(this).attr("page-load");
@@ -172,7 +174,7 @@ function reason() {
 
 function toggle() {
 	if (document.getElementById("check").checked) {
-		student.visible = true;
+		student.mood = [invisible]
 		console.log("checked");
 		console.log(student.visible);
 	}
@@ -181,6 +183,7 @@ function toggle() {
 	}
 }
 
+console.log(student)
 // var present = document.getElementById("present");
 // present.onclick = function() {
 // 	student.mood = [present];
@@ -194,3 +197,4 @@ function toggle() {
 // }
 
 localStorage.setItem("students", JSON.stringify(students));
+console.log(student)
