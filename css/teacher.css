@@ -62,23 +62,23 @@ a {
   color: white;
 } 
 
-.angry {
+.stressed, .frustrated, .furious {
   background: linear-gradient(to left, #D9C2FA, #5720A8)
 }
 
-.happy {
+.carefree, .grateful, .excited {
   background: linear-gradient(to bottom, #FFC69D, #F76B1C)
 }
 
-.present {
+.present, .focused, .curious {
   background: linear-gradient(to top, #DCFB89, #8BBE01)
 }
 
-.sad {
+.lonely, .hopeless, .grief {
   background: linear-gradient(to right, #87DAFA, #0086B9)
 }
 
-.incomp {
+.invisible {
   background: linear-gradient(to right, rgb(194, 188, 188), gray)
 }
 
