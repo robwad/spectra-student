@@ -190,8 +190,8 @@ function editJen() {
   students[12].comment = currentJen.comment
   students[12].alert = currentJen.alert
   students[12].mood = currentJen.mood
-
 }
+editJen();
 renderClass(students);
 // renderAlert()
 
