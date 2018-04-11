@@ -9,7 +9,11 @@ let student = 	{
 }
 
 function reason() {
+<<<<<<< HEAD
 	console.log("reason clicked");
+=======
+	console.log("reason button clicked - student's reason is stored");
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
 	student.comment = document.getElementById("reason").value;
 	console.log(student.comment);
 }
@@ -17,7 +21,11 @@ function reason() {
 function toggle() {
 	if (document.getElementById("check").checked) {
 		student.visible = true;
+<<<<<<< HEAD
 		console.log("checked");
+=======
+		console.log("checkbox is checked");
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
 		console.log(student.visible);
 	}
 	else {
@@ -64,6 +72,7 @@ $(document).ready(function() {
 	// 	student.comment = document.getElementById("reason").value;
 	// }
 
+<<<<<<< HEAD
 	function present() {
 		student.mood = [present];
 		console.log("present clicked");
@@ -72,10 +81,25 @@ $(document).ready(function() {
 	present.onclick = function() {
 		student.mood = [present];
 		console.log("present clicked");
+=======
+	// function present() {
+	// 	student.mood = [present];
+	// 	console.log("present clicked");
+	// }
+	var present = document.getElementById("present");
+	present.onclick = function() {
+		student.mood = [present.textContent];
+		console.log("present clicked");
+		console.log(student.mood);
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
 	}
 	var focused = document.getElementById("focused");
 	focused.onclick = function() {
 		student.mood = [focused];
+<<<<<<< HEAD
+=======
+		console.log("focused clicked")
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
 	}
 	var curious = document.getElementById("curious");
 	curious.onclick = function() {
@@ -118,6 +142,7 @@ $(document).ready(function() {
 		student.mood = [furious];
 	}
 
+<<<<<<< HEAD
 	function toggle() {
 		if (document.getElementById("check").checked) {
 			student.visible = true;
@@ -127,13 +152,28 @@ $(document).ready(function() {
 			student.visible = false;
 		}
 	}
+=======
+	// function toggle() {
+	// 	if (document.getElementById("check").checked) {
+	// 		student.visible = true;
+	// 		console.log("checked")
+	// 	}
+	// 	else {
+	// 		student.visible = false;
+	// 	}
+	// }
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
 	// add the updated student to the students list
 	students.push(student)
 
 	// console.log(students)
 	// console.log(student)
 
+<<<<<<< HEAD
 	localStorage.setItem("students", JSON.stringify(students));
+=======
+	// localStorage.setItem("students", JSON.stringify(students));
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
 
 	$(".link").fastClick(function () {
 		screen = "#" + $(this).attr("page-load");
@@ -172,7 +212,11 @@ function reason() {
 
 function toggle() {
 	if (document.getElementById("check").checked) {
+<<<<<<< HEAD
 		student.visible = true;
+=======
+		student.mood = [invisible]
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
 		console.log("checked");
 		console.log(student.visible);
 	}
@@ -181,6 +225,10 @@ function toggle() {
 	}
 }
 
+<<<<<<< HEAD
+=======
+console.log(student)
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
 // var present = document.getElementById("present");
 // present.onclick = function() {
 // 	student.mood = [present];
@@ -194,3 +242,7 @@ function toggle() {
 // }
 
 localStorage.setItem("students", JSON.stringify(students));
+<<<<<<< HEAD
+=======
+console.log(student)
+>>>>>>> b84129c11fb43c9499625dca1e676a0671bfd16f
