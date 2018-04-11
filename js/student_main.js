@@ -4,7 +4,7 @@ let student = 	{
 	name: "Jane",
 	comment: "",
 	alert: false,
-	visible: false,
+	// visible: false,
 	mood: []
 }
 
@@ -16,12 +16,12 @@ function reason() {
 
 function toggle() {
 	if (document.getElementById("check").checked) {
-		student.visible = true;
+		// student.visible = true;
 		console.log("checkbox is checked");
-		console.log(student.visible);
+		// console.log(student.visible);
 	}
 	else {
-		student.visible = false;
+		// student.visible = false;
 	}
 }
 
