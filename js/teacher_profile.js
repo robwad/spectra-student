@@ -34,6 +34,7 @@ function renderComment(stud) {
   commentElm.innerHTML = insertComment(stud);
 }
 
+let currentprofile = localStorage.getItem('current');
 
 // renderProfile(currentprofile);
 // renderMood(currentprofile);

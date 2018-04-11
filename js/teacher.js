@@ -157,12 +157,11 @@ function renderStudents(studs) {
 }
 
 function renderClass(classview) {
-  // insert html into classroom
   let classElm = document.querySelector('.classroom');
   classElm.innerHTML = renderStudents(classview);
   // record which student is clicked
   let squares = document.querySelectorAll(".flex-grid-thirds .grid-element");
-  //!! this needs to specify what to store  in local storage
+  //!! how do I pass in the student data corresponding to the student square that was clicked?
   // squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(   ))));
 }
 
@@ -174,16 +173,18 @@ function insertAlert() {
 function renderAlert() {
   // alertbool = 
   if (alertbool) {
-    //!! needs a way of positioning this in correct part of html
+    //!! I've always used innerHTML to pass html into a div according to its class, but here I want the name to be displayed in a list
+    //!! so what would I use instead of a innerHTML?
     let alertElm = document.querySelector('   ');
     alertElm.innerHTML = insertAlert();
   }
 }
 
 function editJen() {
-  //!! need to add name that kev uses
   let currentJen = students[12];
   let storedJen = localStorage.getItem('students');
+  //!! this console.log returns: [{"name":"Jane","comment":"","alert":false,"mood":[]}] even after interacting with the student UI 
+  //!! this suggests that Kevin's code is not correctly storing the data when the mood, comment and alert are input?
   console.log(storedJen);
   if (storedJen != null) {
     currentJen = JSON.parse(storedJen); 
