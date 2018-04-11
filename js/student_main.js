@@ -48,7 +48,7 @@ $(document).ready(function() {
 
 	confirm.onclick = function() {
 		modal.style.display = "none";
-		console.log("Mrs. Jameson notified");
+		console.log("Teacher has been notified");
 		student.alert = true;
 	}
 
