@@ -50,6 +50,6 @@ let test = {
   alert: false,
   mood: ["\uD83D\uDE05", "grateful"]
 }
-renderProfile(test);
-renderMood(test);
-renderComment(test);
+renderProfile(dispProf);
+renderMood(dispProf);
+renderComment(dispProf);
