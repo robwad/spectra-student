@@ -7,119 +7,119 @@ let students = [
     name: "Grace",
     comment: "I had a good ride to school",
     alert: false,
-    mood: [1, "lonely"]
+    mood: [1, "lonely"],
   },
   {
     name: "Tom",
-    comment: null,
+    comment: "That was some excellent breakfast!",
     alert: false,
     mood: [1, "grateful"]
   },
   {
     name: "Lizzie",
-    comment: null,
+    comment: "I woke up feeling great",
     alert: false,
     mood: [1, "curious"]
   },
   {
     name: "Jane",
-    comment: null,
+    comment: "No comment today",
     alert: false,
     mood: [1, "furious"]
   },
   {
     name: "Andrew",
-    comment: null,
+    comment: "My tummy don't feel so good",
     alert: false,
     mood: [1, "lonely"]
   },
   {
     name: "Julius",
-    comment: null,
+    comment: "Woweee Jane is pretty",
     alert: false,
     mood: [1, "curious"]
   },
   {
     name: "Helen",
-    comment: null,
+    comment: "I is kind, I is smart, I is important",
     alert: false,
     mood: [1, "furious"]
   },
   {
     name: "Julie",
-    comment: null,
+    comment: "John was talking to Michaela which is not fair because she doesn't sit still",
     alert: false,
     mood: [1, "lonely"]
   },
   {
     name: "Jackson",
-    comment: null,
+    comment: "My dad is a rocket scientist",
     alert: false,
     mood: [1, "grateful"]
   },
   {
     name: "Michaela",
-    comment: null,
+    comment: "Ooh I like Math",
     alert: true,
     mood: [1, "curious"]
   },
   {
     name: "John",
-    comment: null,
+    comment: "John, John Travolta hahaha",
     alert: false,
     mood: [1, "furious"]
   },
   {
     name: "Ashley",
-    comment: null,
+    comment: "These are my thoughts",
     alert: false,
     mood: [1, "invisible"]
   },
   {
     name: "Jen",
-    comment: null,
+    comment: "That is the way it goes",
     alert: false,
     mood: [1, "furious"]
   },
   {
     name: "Jacob",
-    comment: null,
+    comment: "Esau was being mean today",
     alert: true,
     mood: [1, "lonely"]
   },
   {
     name: "Patricia",
-    comment: null,
+    comment: "Could be the day",
     alert: false,
     mood: [1, "focused"]
   },
   {
     name: "Ben",
-    comment: null,
+    comment: "I am a rock",
     alert: false,
     mood: [1, "grateful"]
   },
   {
     name: "Alex",
-    comment: null,
+    comment: "I love soccer",
     alert: true,
     mood: [1, "lonely"]
   },
   {
     name: "Alice",
-    comment: null,
+    comment: "Yesterday was a long day",
     alert: false,
     mood: [1, "curious"]
   },
   {
     name: "Kevin",
-    comment: null,
+    comment: "I need some space",
     alert: false,
     mood: [1, "lonely"]
   },
   {
     name: "Rob",
-    comment: null,
+    comment: "Wonderful and epic today",
     alert: false,
     mood: [1, "invisible"]
   }
@@ -170,8 +170,8 @@ function insertAlert() {
   return `<a class="waves-effect" href="#!">Jen</a>`
 }
 
-function renderAlert() {
-  alertbool = true;
+function renderAlert(prof) {
+  alertbool = prof.alert;
   if (alertbool) {
     //!! I've always used innerHTML to pass html into a div according to its class, but here I want the name to be displayed in a list
     //!! so what would I use instead of a innerHTML?
@@ -192,6 +192,8 @@ function editJen() {
   students[12].comment = currentJen.comment;
   students[12].alert = currentJen.alert;
   // students[12].mood[1] = currentJen.mood;
+  renderAlert(currentJen)
+
 }
 editJen();
 renderClass(students);

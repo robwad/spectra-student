@@ -37,7 +37,7 @@ function renderComment(stud) {
 let currentprofile = localStorage.getItem('current');
 
 let test = {
-  name: "Tom",
+  name: "Ashley",
   comment: "Hey there!",
   alert: false,
   mood: ["\uD83D\uDE05", "grateful"]
