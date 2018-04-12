@@ -8,6 +8,7 @@ let student = 	{
 	mood: []
 }
 
+//submit the reasoning
 function reason() {
 	console.log("reason button clicked student's reason is stored");
 	student.comment = document.getElementById("reason").value;
@@ -16,6 +17,7 @@ function reason() {
 	console.log(student.comment);
 }
 
+//privacy setting
 function toggle() {
 	var mood = student.mood 
 	if (document.getElementById("check").checked) {
@@ -50,6 +52,7 @@ $(document).ready(function() {
 	    modal.style.display = "none";
 	}
 
+	//confirm the alert?
 	confirm.onclick = function() {
 		modal.style.display = "none";
 		if (document.getElementById("jameson").checked) {
@@ -73,6 +76,7 @@ $(document).ready(function() {
 	    }
 	}
 
+	//setting the mood appropriately
 	var present = document.getElementById("present");
 	present.onclick = function() {
 		student.mood = ["\uD83D\uDE0C","present"];
@@ -191,5 +195,6 @@ $(document).ready(function() {
 		}
 	})
 });
+
 students.push(student)
 localStorage.setItem("students", JSON.stringify(students));
