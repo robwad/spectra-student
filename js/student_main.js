@@ -1,7 +1,7 @@
 let students = []
 
 let student = 	{
-	name: "Jane",
+	name: "Jen",
 	comment: "",
 	alert: false,
 	// visible: false,
@@ -79,6 +79,7 @@ $(document).ready(function() {
 	//setting the mood appropriately
 	var present = document.getElementById("present");
 	present.onclick = function() {
+		console.log("test")
 		student.mood = ["\uD83D\uDE0C","present"];
 		students.push(student)
 		localStorage.setItem("students", JSON.stringify(students));
