@@ -20,6 +20,7 @@
 
 .left p {
   font-size: 6em;
+  margin: 0px;
 }
 .calendar {
   padding: 0 100px 0;
@@ -53,6 +54,7 @@ p, .right h3{
 .moodtoday {
   text-align: center;
   padding: 0 0 60px;
+  margin: 20px;
 }
 .flex-grid-thirds {
   display: flex;

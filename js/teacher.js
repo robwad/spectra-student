@@ -9,49 +9,49 @@ let students = [
     name: "Grace",
     comment: "I had a good ride to school",
     alert: false,
-    mood: [1, "lonely"],
+    mood: ["\uD83D\uDE33", "lonely"]
   },
   {
     name: "Tom",
     comment: "That was some excellent breakfast!",
     alert: false,
-    mood: [1, "grateful"]
+    mood: ["\uD83D\uDE4F", "grateful"]
   },
   {
     name: "Lizzie",
     comment: "I woke up feeling great",
     alert: false,
-    mood: [1, "curious"]
+    mood: ["\uD83E\uDD29", "curious"]
   },
   {
     name: "Jane",
     comment: "No comment today",
     alert: false,
-    mood: [1, "furious"]
+    mood: ["\uD83D\uDE21", "furious"]
   },
   {
     name: "Andrew",
     comment: "My tummy don't feel so good",
     alert: false,
-    mood: [1, "lonely"]
+    mood: ["\uD83D\uDE33", "lonely"]
   },
   {
     name: "Julius",
     comment: "Woweee Jane is pretty",
     alert: false,
-    mood: [1, "curious"]
+    mood: ["\uD83E\uDD29", "curious"]
   },
   {
     name: "Helen",
     comment: "I is kind, I is smart, I is important",
     alert: false,
-    mood: [1, "furious"]
+    mood: ["\uD83D\uDE21", "furious"]
   },
   {
     name: "Julie",
     comment: "John was talking to Michaela which is not fair because she doesn't sit still",
     alert: false,
-    mood: [1, "lonely"]
+    mood: ["\uD83D\uDE33", "lonely"]
   },
   {
     name: "Jackson",
@@ -63,13 +63,13 @@ let students = [
     name: "Michaela",
     comment: "Ooh I like Math",
     alert: true,
-    mood: [1, "curious"]
+    mood: ["\uD83E\uDD29", "curious"]
   },
   {
     name: "John",
     comment: "John, John Travolta hahaha",
     alert: false,
-    mood: [1, "furious"]
+    mood: ["\uD83D\uDE21", "furious"]
   },
   {
     name: "Ashley",
@@ -81,13 +81,13 @@ let students = [
     name: "Jen",
     comment: "That is the way it goes",
     alert: false,
-    mood: [1, "furious"]
+    mood: ["\uD83D\uDE21", "furious"]
   },
   {
     name: "Jacob",
     comment: "Esau was being mean today",
     alert: true,
-    mood: [1, "lonely"]
+    mood: ["\uD83D\uDE33", "lonely"]
   },
   {
     name: "Patricia",
@@ -99,31 +99,31 @@ let students = [
     name: "Ben",
     comment: "I am a rock",
     alert: false,
-    mood: [1, "grateful"]
+    mood: ["\uD83D\uDE4F", "grateful"]
   },
   {
     name: "Alex",
     comment: "I love soccer",
     alert: true,
-    mood: [1, "lonely"]
+    mood: ["\uD83D\uDE33", "lonely"]
   },
   {
     name: "Alice",
     comment: "Yesterday was a long day",
     alert: false,
-    mood: [1, "curious"]
+    mood: ["\uD83E\uDD29", "curious"]
   },
   {
     name: "Kevin",
     comment: "I need some space",
     alert: false,
-    mood: [1, "lonely"]
+    mood: ["\uD83D\uDE33", "lonely"]
   },
   {
     name: "Rob",
     comment: "Wonderful and epic today",
     alert: false,
-    mood: [1, "invisible"]
+    mood: ["", "invisible"]
   }
 ]
 
@@ -167,12 +167,17 @@ function renderClass(classview) {
   let squares = document.querySelectorAll(".flex-grid-thirds .grid-element");
   //!! for some reason when I call this line below it always stores the name of Rob the last student in the list. It should be storing
   //!! the name of whichever student was clicked on the teacher homepage.
-  squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(el.textContent))));
+  // squares.forEach(el => el.addEventListener('click', function(a) {localStorage.setItem('current', JSON.stringify(a.target.text))}));
   //!! the line above is to try catch the bug, this line below is what I will eventually use. It will store the data (not just the name) of the 
   //!! student that has been clicked on at the teacher homepage(the one with a grid). Then on line 38 in teacher_profile.js I will get this data from local
   //!! storage and use it to decide which name, mood and comment to display. To be clear, the student_profile page should 
   //!! display only the information that is relevant to the student that has been clicked on the teacher homepage.
   // squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(students.find(e => el.textContent == e.name)))));
+  squares.forEach(el => el.addEventListener('click', function(a) {localStorage.setItem('current', JSON.stringify(students.find(e => a.target.text == e.name)))}));
+  // squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(students.find(e => el.textContent == e.name)))));
+
+
+  
 }
 // 
 // renders list of requested meetings

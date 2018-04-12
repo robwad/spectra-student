@@ -43,12 +43,12 @@ console.log(dispProf)
 // let a = dispProf.innerHTML;
 // console.log(a)
 
-// placeholder data
+// placeholder datas
 let test = {
   name: "Ashley",
   comment: "Wow Zeerak is such a great TF!",
   alert: false,
-  mood: ["\uD83D\uDE05", "grateful"]
+  mood: ["\uD83D\uDE05", "Grateful"]
 }
 renderProfile(dispProf);
 renderMood(dispProf);
