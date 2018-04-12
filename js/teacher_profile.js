@@ -34,11 +34,13 @@ function renderComment(stud) {
   commentElm.innerHTML = insertComment(stud);
 }
 
+// allows the rendering to be based on the student that was clicked on the teacher's homescreen
 let currentprofile = localStorage.getItem('current');
 
+// placeholder data
 let test = {
   name: "Ashley",
-  comment: "Hey there!",
+  comment: "Wow Zeerak is such a great TF!",
   alert: false,
   mood: ["\uD83D\uDE05", "grateful"]
 }

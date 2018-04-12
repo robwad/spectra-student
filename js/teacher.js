@@ -1,7 +1,9 @@
 
+// the requested meetings interaction
 var elem = document.querySelector('.sidenav');
 var instance = M.Sidenav.init(elem, {});
 
+// the initialization of all of the students' data
 let students = [
   {
     name: "Grace",
@@ -125,6 +127,7 @@ let students = [
   }
 ]
 
+//  inserting the html that displays the grid view of the students
 function renderStudents(studs) {
   return `<div class="flex-grid-thirds">
   <div class="col grid-element ${studs[0].mood[1]}"><a href="teacher_profile.html">${studs[0].name}</a></div>
@@ -156,6 +159,7 @@ function renderStudents(studs) {
 </div>`
 }
 
+// renders the classroom
 function renderClass(classview) {
   let classElm = document.querySelector('.classroom');
   classElm.innerHTML = renderStudents(classview);
@@ -180,6 +184,7 @@ function renderAlert(prof) {
   }
 }
 
+// changes the student called Jen's data based on the input from the student UI
 function editJen() {
   let currentJen = students[12];
   let storedJen = localStorage.getItem('students');
@@ -197,5 +202,4 @@ function editJen() {
 }
 editJen();
 renderClass(students);
-// renderAlert()
 
