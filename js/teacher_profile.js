@@ -26,7 +26,7 @@ function renderMood(stud) {
 // comment rendering
 function insertComment(stud) {
   return `<h3>Today's Comment</h3>
-  <p>06/26 Lorem ipsum dolor sit amet, consectetuer</p>`
+  <p>06/26 ${stud.comment}</p>`
 }
 
 function renderComment(stud) {
@@ -36,6 +36,12 @@ function renderComment(stud) {
 
 let currentprofile = localStorage.getItem('current');
 
-// renderProfile(currentprofile);
-// renderMood(currentprofile);
-// renderComment(currentprofile);
+let test = {
+  name: "Tom",
+  comment: "Hey there!",
+  alert: false,
+  mood: ["\uD83D\uDE05", "grateful"]
+}
+renderProfile(test);
+renderMood(test);
+renderComment(test);
