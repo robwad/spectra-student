@@ -36,6 +36,12 @@ function renderComment(stud) {
 
 // allows the rendering to be based on the student that was clicked on the teacher's homescreen
 let currentprofile = localStorage.getItem('current');
+if (currentprofile != null) {
+  dispProf = JSON.parse(currentprofile); 
+}
+console.log(dispProf)
+// let a = dispProf.innerHTML;
+// console.log(a)
 
 // placeholder data
 let test = {

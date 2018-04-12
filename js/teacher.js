@@ -166,19 +166,17 @@ function renderClass(classview) {
   // record which student is clicked
   let squares = document.querySelectorAll(".flex-grid-thirds .grid-element");
   //!! how do I pass in the student data corresponding to the student square that was clicked?
-  // squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(   ))));
+  squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(students.find(e => el.textContent == e.name)))));
 }
-
+// 
 // renders list of requested meetings
 function insertAlert() {
   return `<a class="waves-effect" href="#!">Jen</a>`
 }
 
 function renderAlert(prof) {
-  alertbool = prof.alert;
+  alertbool = false;
   if (alertbool) {
-    //!! I've always used innerHTML to pass html into a div according to its class, but here I want the name to be displayed in a list
-    //!! so what would I use instead of a innerHTML?
     let alertElm = document.querySelector('#inserthere');
     alertElm.innerHTML = insertAlert();
   }
