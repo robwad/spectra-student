@@ -167,15 +167,15 @@ function renderClass(classview) {
 
 // renders list of requested meetings
 function insertAlert() {
-  return `<li><a class="waves-effect" href="#!">Jen</a></li>`
+  return `<a class="waves-effect" href="#!">Jen</a>`
 }
 
 function renderAlert() {
-  // alertbool = 
+  alertbool = true;
   if (alertbool) {
     //!! I've always used innerHTML to pass html into a div according to its class, but here I want the name to be displayed in a list
     //!! so what would I use instead of a innerHTML?
-    let alertElm = document.querySelector('   ');
+    let alertElm = document.querySelector('#inserthere');
     alertElm.innerHTML = insertAlert();
   }
 }
