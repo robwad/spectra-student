@@ -165,10 +165,10 @@ function renderClass(classview) {
   classElm.innerHTML = renderStudents(classview);
   // record which student is clicked
   let squares = document.querySelectorAll(".flex-grid-thirds .grid-element");
-  //!! for some reason when I call this line below it always stores the data of Rob the last student in the list. It should be storing
-  //!! the data of whichever student was clicked on the teacher homepage.
+  //!! for some reason when I call this line below it always stores the name of Rob the last student in the list. It should be storing
+  //!! the name of whichever student was clicked on the teacher homepage.
   squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(el.textContent))));
-  //!! the line above is to try catch the bug, this line below is what I will eventually use. It will store the data of the 
+  //!! the line above is to try catch the bug, this line below is what I will eventually use. It will store the data (not just the name) of the 
   //!! student that has been clicked on at the teacher homepage(the one with a grid). Then on line 38 in teacher_profile.js I will get this data from local
   //!! storage and use it to decide which name, mood and comment to display. To be clear, the student_profile page should 
   //!! display only the information that is relevant to the student that has been clicked on the teacher homepage.
