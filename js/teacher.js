@@ -184,7 +184,7 @@ function renderAlert(prof) {
 // changes the student called Jen's data based on the input from the student UI
 function editJen() {
   let currentJen = students[12];
-  let storedJen = localStorage.getItem('students');
+  let storedJen = localStorage.getItem('students')[0];
   console.log(storedJen);
   if (storedJen.mood != null) {
     currentJen = JSON.parse(storedJen); 
