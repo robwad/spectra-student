@@ -9,121 +9,121 @@ let students = [
     name: "Grace",
     comment: "I had a good ride to school",
     alert: false,
-    mood: ["\uD83D\uDE33", "lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"]
   },
   {
     name: "Tom",
     comment: "That was some excellent breakfast!",
     alert: false,
-    mood: ["\uD83D\uDE4F", "grateful"]
+    mood: ["\uD83D\uDE4F", "Grateful"]
   },
   {
     name: "Lizzie",
     comment: "I woke up feeling great",
     alert: false,
-    mood: ["\uD83E\uDD29", "curious"]
+    mood: ["\uD83E\uDD29", "Curious"]
   },
   {
     name: "Jane",
     comment: "No comment today",
     alert: false,
-    mood: ["\uD83D\uDE21", "furious"]
+    mood: ["\uD83D\uDE21", "Furious"]
   },
   {
     name: "Andrew",
     comment: "My tummy don't feel so good",
     alert: false,
-    mood: ["\uD83D\uDE33", "lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"]
   },
   {
     name: "Julius",
     comment: "Woweee Jane is pretty",
     alert: false,
-    mood: ["\uD83E\uDD29", "curious"]
+    mood: ["\uD83E\uDD29", "Curious"]
   },
   {
     name: "Helen",
     comment: "I is kind, I is smart, I is important",
     alert: false,
-    mood: ["\uD83D\uDE21", "furious"]
+    mood: ["\uD83D\uDE21", "Furious"]
   },
   {
     name: "Julie",
     comment: "John was talking to Michaela which is not fair because she doesn't sit still",
     alert: false,
-    mood: ["\uD83D\uDE33", "lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"]
   },
   {
     name: "Jackson",
     comment: "My dad is a rocket scientist",
     alert: false,
-    mood: [1, "grateful"]
+    mood: ["\uD83D\uDE4F", "Grateful"]
   },
   {
     name: "Michaela",
     comment: "Ooh I like Math",
     alert: true,
-    mood: ["\uD83E\uDD29", "curious"]
+    mood: ["\uD83E\uDD29", "Curious"]
   },
   {
     name: "John",
     comment: "John, John Travolta hahaha",
     alert: false,
-    mood: ["\uD83D\uDE21", "furious"]
+    mood: ["\uD83D\uDE21", "Furious"]
   },
   {
     name: "Ashley",
     comment: "These are my thoughts",
     alert: false,
-    mood: [1, "invisible"]
+    mood: ["", "Invisible"]
   },
   {
     name: "Jen",
     comment: "That is the way it goes",
     alert: false,
-    mood: ["\uD83D\uDE21", "furious"]
+    mood: ["\uD83D\uDE21", "Furious"]
   },
   {
     name: "Jacob",
     comment: "Esau was being mean today",
     alert: true,
-    mood: ["\uD83D\uDE33", "lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"]
   },
   {
     name: "Patricia",
     comment: "Could be the day",
     alert: false,
-    mood: [1, "focused"]
+    mood: ["\uD83E\uDD14", "Focused"]
   },
   {
     name: "Ben",
     comment: "I am a rock",
     alert: false,
-    mood: ["\uD83D\uDE4F", "grateful"]
+    mood: ["\uD83D\uDE4F", "Grateful"]
   },
   {
     name: "Alex",
     comment: "I love soccer",
     alert: true,
-    mood: ["\uD83D\uDE33", "lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"]
   },
   {
     name: "Alice",
     comment: "Yesterday was a long day",
     alert: false,
-    mood: ["\uD83E\uDD29", "curious"]
+    mood: ["\uD83E\uDD29", "Curious"]
   },
   {
     name: "Kevin",
     comment: "I need some space",
     alert: false,
-    mood: ["\uD83D\uDE33", "lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"]
   },
   {
     name: "Rob",
     comment: "Wonderful and epic today",
     alert: false,
-    mood: ["", "invisible"]
+    mood: ["", "Invisible"]
   }
 ]
 

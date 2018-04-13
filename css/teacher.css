@@ -63,23 +63,23 @@ a {
   color: white;
 } 
 
-.stressed, .frustrated, .furious {
+.Stressed, .Frustrated, .Furious {
   background: linear-gradient(to left, #D9C2FA, #5720A8)
 }
 
-.carefree, .grateful, .excited {
+.Carefree, .Grateful, .Excited {
   background: linear-gradient(to bottom, #FFC69D, #F76B1C)
 }
 
-.present, .focused, .curious {
+.Present, .Focused, .Curious {
   background: linear-gradient(to top, #DCFB89, #8BBE01)
 }
 
-.lonely, .hopeless, .grief {
+.Lonely, .Hopeless, .Grief {
   background: linear-gradient(to right, #87DAFA, #0086B9)
 }
 
-.invisible {
+.Invisible {
   background: linear-gradient(to right, rgb(194, 188, 188), gray)
 }
 
