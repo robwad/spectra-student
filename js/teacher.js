@@ -165,19 +165,7 @@ function renderClass(classview) {
   classElm.innerHTML = renderStudents(classview);
   // record which student is clicked
   let squares = document.querySelectorAll(".flex-grid-thirds .grid-element");
-  //!! for some reason when I call this line below it always stores the name of Rob the last student in the list. It should be storing
-  //!! the name of whichever student was clicked on the teacher homepage.
-  // squares.forEach(el => el.addEventListener('click', function(a) {localStorage.setItem('current', JSON.stringify(a.target.text))}));
-  //!! the line above is to try catch the bug, this line below is what I will eventually use. It will store the data (not just the name) of the 
-  //!! student that has been clicked on at the teacher homepage(the one with a grid). Then on line 38 in teacher_profile.js I will get this data from local
-  //!! storage and use it to decide which name, mood and comment to display. To be clear, the student_profile page should 
-  //!! display only the information that is relevant to the student that has been clicked on the teacher homepage.
-  // squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(students.find(e => el.textContent == e.name)))));
   squares.forEach(el => el.addEventListener('click', function(a) {localStorage.setItem('current', JSON.stringify(students.find(e => a.target.text == e.name)))}));
-  // squares.forEach(el => el.addEventListener('click', localStorage.setItem('current', JSON.stringify(students.find(e => el.textContent == e.name)))));
-
-
-  
 }
 // 
 // renders list of requested meetings
@@ -197,15 +185,15 @@ function renderAlert(prof) {
 function editJen() {
   let currentJen = students[12];
   let storedJen = localStorage.getItem('students');
-  //?? This should work after kev is done.
   console.log(storedJen);
-  if (storedJen != null) {
+  if (storedJen.mood != null) {
     currentJen = JSON.parse(storedJen); 
+    students[12].comment = currentJen.comment;
+    students[12].alert = currentJen.alert;
+    console.log(students[12].mood)
+    students[12].mood = currentJen.mood;
+    renderAlert(currentJen)
   }
-  students[12].comment = currentJen.comment;
-  students[12].alert = currentJen.alert;
-  // students[12].mood = currentJen.mood;
-  renderAlert(currentJen)
 }
 editJen();
 renderClass(students);
