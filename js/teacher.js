@@ -205,7 +205,7 @@ function renderAlert(prof) {
 function editJen() {
   let currentJen = students[12];
   let storedJen = localStorage.getItem('students');
-  console.log(storedJen);
+  console.log(storedJen[0]);
   if (storedJen.mood != null) {
     currentJen = JSON.parse(storedJen[0]); 
     students[12].comment = currentJen.comment;
