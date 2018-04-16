@@ -205,9 +205,10 @@ function renderAlert(prof) {
 function editJen() {
   let currentJen = students[12];
   let storedJen = localStorage.getItem('students');
-  console.log(storedJen[0]);
+  console.log(storedJen);
   if (storedJen.mood != null) {
-    currentJen = JSON.parse(storedJen[0]); 
+    currentJen = JSON.parse(storedJen); 
+    currentJen = currentJen[0]
     students[12].comment = currentJen.comment;
     students[12].alert = currentJen.alert;
     console.log(students[12].mood)
