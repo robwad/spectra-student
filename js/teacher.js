@@ -9,121 +9,141 @@ let students = [
     name: "Grace",
     comment: "I had a good ride to school",
     alert: false,
-    mood: ["\uD83D\uDE33", "Lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Tom",
     comment: "That was some excellent breakfast!",
     alert: false,
-    mood: ["\uD83D\uDE4F", "Grateful"]
+    mood: ["\uD83D\uDE4F", "Grateful"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Lizzie",
     comment: "I woke up feeling great",
     alert: false,
-    mood: ["\uD83E\uDD29", "Curious"]
+    mood: ["\uD83E\uDD29", "Curious"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "Jane",
     comment: "No comment today",
     alert: false,
-    mood: ["\uD83D\uDE21", "Furious"]
+    mood: ["\uD83D\uDE21", "Furious"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "Andrew",
     comment: "My tummy don't feel so good",
     alert: false,
-    mood: ["\uD83D\uDE33", "Lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Julius",
     comment: "Woweee Jane is pretty",
     alert: false,
-    mood: ["\uD83E\uDD29", "Curious"]
+    mood: ["\uD83E\uDD29", "Curious"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Helen",
     comment: "I is kind, I is smart, I is important",
     alert: false,
-    mood: ["\uD83D\uDE21", "Furious"]
+    mood: ["\uD83D\uDE21", "Furious"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "Julie",
     comment: "John was talking to Michaela which is not fair because she doesn't sit still",
     alert: false,
-    mood: ["\uD83D\uDE33", "Lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "Jackson",
     comment: "My dad is a rocket scientist",
     alert: false,
-    mood: ["\uD83D\uDE4F", "Grateful"]
+    mood: ["\uD83D\uDE4F", "Grateful"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Michaela",
     comment: "Ooh I like Math",
     alert: true,
-    mood: ["\uD83E\uDD29", "Curious"]
+    mood: ["\uD83E\uDD29", "Curious"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "John",
     comment: "John, John Travolta hahaha",
     alert: false,
-    mood: ["\uD83D\uDE21", "Furious"]
+    mood: ["\uD83D\uDE21", "Furious"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Ashley",
     comment: "These are my thoughts",
     alert: false,
-    mood: ["", "Invisible"]
+    mood: ["", "Invisible"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "Jen",
     comment: "That is the way it goes",
     alert: false,
-    mood: ["\uD83D\uDE21", "Furious"]
+    mood: ["\uD83D\uDE21", "Furious"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "Jacob",
     comment: "Esau was being mean today",
     alert: true,
-    mood: ["\uD83D\uDE33", "Lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Patricia",
     comment: "Could be the day",
     alert: false,
-    mood: ["\uD83E\uDD14", "Focused"]
+    mood: ["\uD83E\uDD14", "Focused"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "Ben",
     comment: "I am a rock",
     alert: false,
-    mood: ["\uD83D\uDE4F", "Grateful"]
+    mood: ["\uD83D\uDE4F", "Grateful"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Alex",
     comment: "I love soccer",
     alert: true,
-    mood: ["\uD83D\uDE33", "Lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Alice",
     comment: "Yesterday was a long day",
     alert: false,
-    mood: ["\uD83E\uDD29", "Curious"]
+    mood: ["\uD83E\uDD29", "Curious"],
+    image: '<img src="../images/aug3.png">'
   },
   {
     name: "Kevin",
     comment: "I need some space",
     alert: false,
-    mood: ["\uD83D\uDE33", "Lonely"]
+    mood: ["\uD83D\uDE33", "Lonely"],
+    image: '<img src="../images/Math-High-School.jpg">'
   },
   {
     name: "Rob",
     comment: "Wonderful and epic today",
     alert: false,
-    mood: ["", "Invisible"]
+    mood: ["", "Invisible"],
+    image: '<img src="../images/Math-High-School.jpg">'
   }
 ]
 
@@ -184,7 +204,7 @@ function renderAlert(prof) {
 // changes the student called Jen's data based on the input from the student UI
 function editJen() {
   let currentJen = students[12];
-  let storedJen = localStorage.getItem('students')[0];
+  let storedJen = localStorage.getItem('students');
   console.log(storedJen);
   if (storedJen.mood != null) {
     currentJen = JSON.parse(storedJen); 

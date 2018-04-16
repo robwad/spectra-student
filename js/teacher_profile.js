@@ -3,7 +3,7 @@
 
 // profile rendering
 function insertProfile(stud) {
-  return `<img src="../images/aug3.png">
+  return `${stud.image}
   <h1>${stud.name}</h1>`
 }
 
