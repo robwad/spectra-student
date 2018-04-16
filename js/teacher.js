@@ -208,7 +208,7 @@ function editJen() {
   console.log(storedJen);
   if (storedJen.mood != null) {
     currentJen = JSON.parse(storedJen);
-    currentJen = currentJen[0];
+    currentJen = currentJen;
     students[12].comment = currentJen.comment;
     students[12].alert = currentJen.alert;
     console.log(students[12].mood)
