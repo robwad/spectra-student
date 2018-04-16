@@ -206,7 +206,7 @@ function editJen() {
   let currentJen = students[12];
   let storedJen = localStorage.getItem('students');
   console.log(storedJen);
-  if (storedJen.mood != null) {
+  if (storedJen != null) {
     currentJen = JSON.parse(storedJen);
     currentJen = currentJen;
     students[12].comment = currentJen.comment;
