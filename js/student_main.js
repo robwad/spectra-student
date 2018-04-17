@@ -80,7 +80,7 @@ $(document).ready(function() {
 	var present = document.getElementById("present");
 	present.onclick = function() {
 		console.log("test")
-		student.mood = ["\uD83D\uDE0C","present"];
+		student.mood = ["\uD83D\uDE0C","Present"];
 		// students.push(student)
 		localStorage.setItem("students", JSON.stringify(student));
 		console.log("present clicked");
@@ -88,7 +88,7 @@ $(document).ready(function() {
 	}
 	var focused = document.getElementById("focused");
 	focused.onclick = function() {
-		student.mood = ["\uD83E\uDD14","focused"];
+		student.mood = ["\uD83E\uDD14","Focused"];
 		console.log("focused clicked");
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
@@ -96,70 +96,70 @@ $(document).ready(function() {
 	}
 	var curious = document.getElementById("curious");
 	curious.onclick = function() {
-		student.mood = ["\uD83E\uDD29", "curious"];
+		student.mood = ["\uD83E\uDD29", "Curious"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var lonely = document.getElementById("lonely");
 	lonely.onclick = function() {
-		student.mood = ["\uD83D\uDE33", "lonely"];
+		student.mood = ["\uD83D\uDE33", "Lonely"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var hopeless = document.getElementById("hopeless");
 	hopeless.onclick = function() {
-		student.mood = ["\uD83D\uDE25", "hopeless"];
+		student.mood = ["\uD83D\uDE25", "Hopeless"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var grief = document.getElementById("grief");
 	grief.onclick = function() {
-		student.mood = ["\uD83D\uDE2D", "grief"];
+		student.mood = ["\uD83D\uDE2D", "Grief"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var carefree = document.getElementById("carefree");
 	carefree.onclick = function() {
-		student.mood = ["\uD83D\uDE00", "carefree"];
+		student.mood = ["\uD83D\uDE00", "Carefree"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var grateful = document.getElementById("grateful");
 	grateful.onclick = function() {
-		student.mood = ["\uD83D\uDE4F", "grateful"];
+		student.mood = ["\uD83D\uDE4F", "Grateful"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var excited = document.getElementById("excited");
 	excited.onclick = function() {
-		student.mood = ["\uD83D\uDE04", "excited"];
+		student.mood = ["\uD83D\uDE04", "Excited"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var stressed = document.getElementById("stressed");
 	stressed.onclick = function() {
-		student.mood = ["\uD83D\uDE30", "stressed"];
+		student.mood = ["\uD83D\uDE30", "Stressed"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var frustrated = document.getElementById("frustrated");
 	frustrated.onclick = function() {
-		student.mood = ["\uD83D\uDE24", "frustrated"];
+		student.mood = ["\uD83D\uDE24", "Frustrated"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
 	}
 	var furious = document.getElementById("furious");
 	furious.onclick = function() {
-		student.mood = ["\uD83D\uDE21", "furious"];
+		student.mood = ["\uD83D\uDE21", "Furious"];
 		// students.push(student);
 		localStorage.setItem("students", JSON.stringify(student));
 		
