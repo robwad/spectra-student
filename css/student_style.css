@@ -69,7 +69,7 @@ textarea {
 	position: center;
 	background-color: none;
 	/*border-radius: 24px;*/
-	font-family: Comic Sans MS;
+	font-family: 'Roboto', sans-serif;
 	margin-top: 60px;
 }
 
@@ -91,7 +91,7 @@ textarea {
     font-size:20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family:Comic Sans MS;
+    font-family: 'Roboto', sans-serif;
 }
 .dropdown:hover .dropdown-content {
     display: block;
@@ -114,9 +114,9 @@ textarea {
 	right:0;
 	line-height:45px;
 	padding:5px 15px 0px 15px;
-	color:#999;
+	color:white;
 	border:0;
-	font-size:1.4em;
+	font-size:2.0em;
 	font-weight:bold;
 	cursor:pointer;
 	outline:none;
@@ -152,7 +152,7 @@ textarea {
     background-color: white;
     width: 50%;
     margin-top: 30px;
-    font-family: Comic Sans MS;
+    font-family: 'Roboto', sans-serif;
 }
 .type:first-child{
 	margin-top: 0px;
@@ -172,7 +172,7 @@ textarea {
     /*padding-bottom: 20px;*/
 	padding-top: 10px;
 	margin-top: 20px;
-	font-family: Comic Sans MS;
+	font-family: 'Roboto', sans-serif;
 	font-size: 25px;
 }
 
@@ -181,7 +181,7 @@ textarea {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-    font-family: Comic Sans MS;
+    font-family: 'Roboto', sans-serif;
 	font-weight: bold;
 }
 .feels {
@@ -201,7 +201,7 @@ textarea {
     background-color: white;
     width: 50%;
     margin-top: 30px;
-    font-family: Comic Sans MS;
+    font-family: 'Roboto', sans-serif;
 }
 
 .feelscontainer{
@@ -356,7 +356,7 @@ header h1{
 	line-height: 44px;
 	padding-bottom: 30px;
 	padding-top: 30px;
-	font-family: Comic Sans MS;
+	font-family: 'Roboto', sans-serif;
 	text-align: center;
 	font-size: 30px;
 	color: #696969;
@@ -393,13 +393,13 @@ header a{
   padding-left: 35px;
   margin-bottom: 30px;
   cursor: pointer;
-  font-size: 42px;
+  font-size: 32px;
   color:black;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: Comic Sans MS;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Hide the browser's default checkbox */
