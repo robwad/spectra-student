@@ -1,7 +1,3 @@
-# Spectra, bridging student-teacher relationships
+# Spectra Student
 
-Here I introduce to you Spectra, a platform to bridge the relationship between students and teachers.
-
-Completed as a part of CS 179 @ Harvard: Design of Useful and Usable Interactive Systems.
-
-Please visit <https://jiwhanyoon.github.io/spectra-student/>
+This is a mobile web app myself and two classmates completed in CS 179 @ Harvard: Design of Useful and Usable Interactive Systems. The emphasis of the class was on user testing and design, rather than web development. I've included some of the relevant files in the Design folder.
